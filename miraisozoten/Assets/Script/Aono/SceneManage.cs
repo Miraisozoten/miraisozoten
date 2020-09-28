@@ -40,4 +40,9 @@ public class SceneManage : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
+
+    public void Result()
+    {
+        SceneManager.LoadScene("Result");
+    }
 }
