@@ -174,5 +174,24 @@ public class PlayerStatusComponent : StatusComponent
             LifeList.Add(Instantiate<GameObject>(RightIcon, IconPanel.transform));
         }
     }
+
+    public bool HP_GaugeSet()
+    {
+        if (HP <= 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
+    public bool HP_IconSet()
+    {
+        if (HP_Icon <= 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }
 

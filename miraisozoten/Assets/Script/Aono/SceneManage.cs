@@ -5,6 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
+    [SerializeField, Header("リセットするとき")]
+    public bool ResetFlag;
+    [SerializeField, Header("クリアしたとき")]
+    public bool ClearFlag;
+    void Start()
+    {
+        ResetFlag = false;
+        ClearFlag = false;
+    }
+
+    void FixedUpdate()
+    {
+        if (ResetFlag)
+        {
+            Reset();
+        }
+    }
+
    public void Stage1()
     {
         SceneManager.LoadScene("Stage1");
@@ -44,5 +62,17 @@ public class SceneManage : MonoBehaviour
     public void Result()
     {
         SceneManager.LoadScene("Result");
+    }
+
+    public void GameClear()
+    {
+        ClearFlag = true;
+    }
+
+    public void Reset()
+    {
+        ResetFlag = false;
+        ClearFlag = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
