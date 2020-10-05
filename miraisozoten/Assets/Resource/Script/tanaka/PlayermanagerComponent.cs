@@ -35,6 +35,8 @@ public class PlayermanagerComponent : MonoBehaviour
         gameoverFlag = false;
         gameclearFlag = false;
         resetFlag = false;
+
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
