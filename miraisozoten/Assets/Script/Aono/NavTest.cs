@@ -18,4 +18,9 @@ public class NavTest : MonoBehaviour
         agent.destination = goal.position;
     }
 
+    void Update()
+    {
+        agent.destination = goal.position;
+    }
+
 }
