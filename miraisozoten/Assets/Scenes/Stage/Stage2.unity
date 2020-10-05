@@ -251,6 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcabfa6c1f5fb04e8897b19ed63f990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResetFlag: 0
+  ClearFlag: 0
 --- !u!114 &218595619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +297,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 218595618}
-        m_MethodName: Stage3
+        m_MethodName: Result2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
