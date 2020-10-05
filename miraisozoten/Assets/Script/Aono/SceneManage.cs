@@ -64,10 +64,37 @@ public class SceneManage : MonoBehaviour
         SceneManager.LoadScene("Result");
     }
 
+    public void Result1()
+    {
+        SceneManager.LoadScene("Result_1");
+    }
+
+    public void Result2()
+    {
+        SceneManager.LoadScene("Result_2");
+    }
+
+    public void Result3()
+    {
+        SceneManager.LoadScene("Result_3");
+    }
+
+    public void Result4()
+    {
+        SceneManager.LoadScene("Result_4");
+    }
+
+    public void Result5()
+    {
+        SceneManager.LoadScene("Result_5");
+    }
+
     public void GameClear()
     {
         ClearFlag = true;
     }
+
+
 
     public void Reset()
     {
