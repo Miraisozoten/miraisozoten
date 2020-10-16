@@ -61,17 +61,31 @@ public class Player : MonoBehaviour
     {
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-            velocity.z += 1;
-        if (Input.GetKey(KeyCode.A))
-            velocity.x -= 1;
-        if (Input.GetKey(KeyCode.S))
-            velocity.z -= 1;
-        if (Input.GetKey(KeyCode.D))
-            velocity.x += 1;
+        float v = 0;
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            velocity.z += 1;
+            v = 1;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            velocity.x -= 1;
+            v = 1;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            velocity.z -= 1;
+            v = 1;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            velocity.x += 1;
+            v = 1;
+        }
         // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
         velocity = velocity.normalized * moveSpeed * Time.deltaTime;
+        anim.SetFloat("Speed", v);                          // Animator側で設定している"Speed"パラメタにvを渡す
 
 
         currentBaseState = anim.GetCurrentAnimatorStateInfo(0);	// 参照用のステート変数にBase Layer (0)の現在のステートを設定する
@@ -85,7 +99,7 @@ public class Player : MonoBehaviour
             // 無回転状態のプレイヤーのZ+方向(後頭部)を、
             // カメラの水平回転(refCamera.hRotation)で回した移動の反対方向(-velocity)に回す回転に段々近づけます
             transform.rotation = Quaternion.Slerp(transform.rotation,
-                                                  Quaternion.LookRotation(refCamera.hRotation * -velocity),
+                                                  Quaternion.LookRotation(refCamera.hRotation * velocity),
                                                   applySpeed);
 
             // プレイヤーの位置(transform.position)の更新
@@ -126,7 +140,7 @@ public class Player : MonoBehaviour
                     {
                         Debug.Log("A");
                         col.height = orgColHight - RollHeight;          // 調整されたコライダーの高さ
-                        float adjCenterY = orgVectColCenter.y ;
+                        float adjCenterY = orgVectColCenter.y + RollHeight / 10;
                         col.center = new Vector3(0, adjCenterY, 0); // 調整されたコライダーのセンター
                     }
                     else
