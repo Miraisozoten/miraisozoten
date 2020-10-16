@@ -144,17 +144,19 @@ namespace UnityChan
             //}
             velocity = velocity.normalized * forwardSpeed * Time.fixedDeltaTime;
 
-            //         if (Input.GetButtonDown ("Jump")) {	// スペースキーを入力したら
+            if (Input.GetButtonDown("Jump"))
+            {   // スペースキーを入力したら
 
-            //	//アニメーションのステートがLocomotionの最中のみジャンプできる
-            //	//if (currentBaseState.nameHash == locoState) {
-            //		//ステート遷移中でなかったらジャンプできる
-            //		if (!anim.IsInTransition (0)) {
-            //			rb.AddForce (Vector3.up * jumpPower, ForceMode.VelocityChange);
-            //			anim.SetBool ("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
-            //		}
-            //	//}
-            //}
+                //アニメーションのステートがLocomotionの最中のみジャンプできる
+                //if (currentBaseState.nameHash == locoState) {
+                //ステート遷移中でなかったらジャンプできる
+                if (!anim.IsInTransition(0))
+                {
+                    rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
+                    anim.SetBool("Jump", true);     // Animatorにジャンプに切り替えるフラグを送る
+                }
+                //}
+            }
 
 
             // 上下のキー入力でキャラクターを移動させる

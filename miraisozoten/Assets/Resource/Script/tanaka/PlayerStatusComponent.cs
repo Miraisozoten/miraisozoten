@@ -36,6 +36,10 @@ public class PlayerStatusComponent : StatusComponent
     public float ButtonInterval;
     private float Timebutton;
 
+    [SerializeField, Header("武器")]
+    public GameObject WeaponObj;
+    private BoxCollider WeaponColider;
+
     private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
     private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
 
@@ -55,6 +59,8 @@ public class PlayerStatusComponent : StatusComponent
 
         anim = GetComponent<Animator>();
 
+        WeaponColider = WeaponObj.GetComponent<BoxCollider>();
+        WeaponColider.enabled = false;
     }
 
     // Update is called once per frame
@@ -63,6 +69,10 @@ public class PlayerStatusComponent : StatusComponent
         if (anim.GetBool("Attack"))
         {
             anim.SetBool("Attack", false);
+        }
+        if (anim.GetBool("Roll"))
+        {
+            anim.SetBool("Roll", false);
         }
 
         Timebutton += Time.fixedDeltaTime;
@@ -89,6 +99,10 @@ public class PlayerStatusComponent : StatusComponent
         if (Input.GetKeyDown(KeyCode.Z))
         {
             anim.SetBool("Attack", true);
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            anim.SetBool("Roll", true);
         }
 
         if (HP_Max_Icon >= HP_Icon)
