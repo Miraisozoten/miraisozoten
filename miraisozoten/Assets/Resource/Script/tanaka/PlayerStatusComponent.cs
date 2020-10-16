@@ -35,6 +35,11 @@ public class PlayerStatusComponent : StatusComponent
     [SerializeField, Header("アイコン減少ボタン間隔/s")]
     public float ButtonInterval;
     private float Timebutton;
+
+    private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
+    private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +52,19 @@ public class PlayerStatusComponent : StatusComponent
             LifeList.Add(Instantiate<GameObject>(LeftIcon, IconPanel.transform));
             LifeList.Add(Instantiate<GameObject>(RightIcon, IconPanel.transform));
         }
+
+        anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (anim.GetBool("Attack"))
+        {
+            anim.SetBool("Attack", false);
+        }
+
         Timebutton += Time.fixedDeltaTime;
 
         if (Input.GetKey(KeyCode.F1))
@@ -71,6 +84,11 @@ public class PlayerStatusComponent : StatusComponent
         {
             Timebutton = 0;
             HP_Icon -= HP_Amount * 0.5f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            anim.SetBool("Attack", true);
         }
 
         if (HP_Max_Icon >= HP_Icon)
