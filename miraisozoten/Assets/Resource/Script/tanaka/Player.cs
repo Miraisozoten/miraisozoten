@@ -40,6 +40,13 @@ public class Player : MonoBehaviour
     // このスイッチが入っていないとカーブは使われない
     public float useCurvesHeight = 0.5f;        // カーブ補正の有効高さ（地面をすり抜けやすい時には大きくする）
 
+    float speed;
+
+    [SerializeField, Header("Roll時の高さ")]
+    public float Rollweight;
+    [SerializeField, Header("Roll時の移動")]
+    public float RollSpeed;
+
     void Start()
     {
         cameraObject = GameObject.FindWithTag("MainCamera");
@@ -63,6 +70,8 @@ public class Player : MonoBehaviour
         velocity = Vector3.zero;
         float v = 0;
 
+        speed = moveSpeed;
+
         if (Input.GetKey(KeyCode.W))
         {
             velocity.z += 1;
@@ -83,8 +92,16 @@ public class Player : MonoBehaviour
             velocity.x += 1;
             v = 1;
         }
+        if (IsAttack())
+        {
+            speed = 0.0f;
+        }else if (IsRoll())
+        {
+            speed = RollSpeed;
+        }
+
         // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
-        velocity = velocity.normalized * moveSpeed * Time.deltaTime;
+        velocity = velocity.normalized * speed * Time.deltaTime;
         anim.SetFloat("Speed", v);                          // Animator側で設定している"Speed"パラメタにvを渡す
 
 
@@ -132,15 +149,17 @@ public class Player : MonoBehaviour
                 Ray ray = new Ray(transform.position + Vector3.up, -Vector3.up);
                 RaycastHit hitInfo = new RaycastHit();
                 float RollHeight = anim.GetFloat("RollHeight");
+                Debug.Log(ray);
+                Debug.DrawRay(ray.origin, ray.direction, Color.red, 3.0f);
 
                 // 高さが useCurvesHeight 以上ある時のみ、コライダーの高さと中心をJUMP00アニメーションについているカーブで調整する
                 if (Physics.Raycast(ray, out hitInfo))
                 {
                     if (hitInfo.distance > useCurvesHeight)
                     {
-                        Debug.Log("A");
+                        //Debug.Log(hitInfo);
                         col.height = orgColHight - RollHeight;          // 調整されたコライダーの高さ
-                        float adjCenterY = orgVectColCenter.y + RollHeight / 10;
+                        float adjCenterY = orgVectColCenter.y + RollHeight / Rollweight;
                         col.center = new Vector3(0, adjCenterY, 0); // 調整されたコライダーのセンター
                     }
                     else
@@ -152,7 +171,7 @@ public class Player : MonoBehaviour
             }
         }
         // 現在のベースレイヤーがidleStateの時
-        else if (currentBaseState.nameHash == idleState)
+        else if (currentBaseState.nameHash == idleState || currentBaseState.nameHash == runState) 
         {
             //カーブでコライダ調整をしている時は、念のためにリセットする
             if (useCurves)
@@ -167,11 +186,29 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    public bool IsRoll()
+    {
+        if (currentBaseState.nameHash == rollState)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsAttack()
+    {
+        if (currentBaseState.nameHash == attackState)
+        {
+            return true;
+        }
+        return false;
+    }
+
     void resetCollider()
     {
         // コンポーネントのHeight、Centerの初期値を戻す
         col.height = orgColHight;
         col.center = orgVectColCenter;
     }
-
 }

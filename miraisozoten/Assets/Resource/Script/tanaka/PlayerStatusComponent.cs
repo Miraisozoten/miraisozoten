@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Player))]
+
 public class PlayerStatusComponent : StatusComponent
 {
     [SerializeField, Header("HP_Icon")]
@@ -43,7 +45,7 @@ public class PlayerStatusComponent : StatusComponent
     private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
     private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
 
-
+    private Player playerCom;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,8 @@ public class PlayerStatusComponent : StatusComponent
 
         WeaponColider = WeaponObj.GetComponent<BoxCollider>();
         WeaponColider.enabled = false;
+
+        playerCom = GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -103,6 +107,15 @@ public class PlayerStatusComponent : StatusComponent
         if (Input.GetKeyDown(KeyCode.X))
         {
             anim.SetBool("Roll", true);
+        }
+
+        if (playerCom.IsAttack())
+        {
+            WeaponColider.enabled = true;
+        }
+        else
+        {
+            WeaponColider.enabled = false;
         }
 
         if (HP_Max_Icon >= HP_Icon)

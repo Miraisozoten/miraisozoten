@@ -153,6 +153,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   useCurves: 1
   useCurvesHeight: 0.5
+  Rollweight: 1
+  RollSpeed: 6
 --- !u!54 &136770816
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9411,9 +9413,12 @@ MonoBehaviour:
   turnSpeed: 10
   player: {fileID: 136770814}
   distance: 6
-  CameraHeight: 0
+  CameraHeight: -1
   vRotation: {x: 0, y: 0, z: 0, w: 0}
   hRotation: {x: 0, y: 0, z: 0, w: 0}
+  camera_x_MaxLimit: 0.5
+  camera_x_MinLimit: -0.5
+  camera_w_Limit: 0.4
 --- !u!1 &721322471
 GameObject:
   m_ObjectHideFlags: 0
