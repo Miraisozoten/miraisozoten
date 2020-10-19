@@ -14,6 +14,9 @@ public class PlayerFollowCamera : MonoBehaviour
 
     [SerializeField]
     private float distance = 15.0f;    // 注視対象プレイヤーからカメラを離す距離
+
+    public float CameraHeight;
+
     [SerializeField]
     private Quaternion vRotation;      // カメラの垂直回転(見下ろし回転)
     [SerializeField]
@@ -54,6 +57,7 @@ public class PlayerFollowCamera : MonoBehaviour
             hRotation *= Quaternion.Euler(0, 1 * turnSpeed, 0);
         }
 
+        hRotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * turnSpeed, 0);
 
         // カメラの回転(transform.rotation)の更新
         // 方法1 : 垂直回転してから水平回転する合成回転とします
@@ -62,5 +66,7 @@ public class PlayerFollowCamera : MonoBehaviour
         // カメラの位置(transform.position)の更新
         // player位置から距離distanceだけ手前に引いた位置を設定します(位置補正版)
         transform.position = player.position + new Vector3(0, 3, 0) - transform.rotation * Vector3.forward * distance;
+        transform.position = new Vector3(transform.position.x, transform.position.y + CameraHeight, transform.position.z);
+
     }
 }
