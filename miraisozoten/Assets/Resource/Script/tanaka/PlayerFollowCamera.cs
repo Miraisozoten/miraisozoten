@@ -22,6 +22,12 @@ public class PlayerFollowCamera : MonoBehaviour
     [SerializeField]
     public Quaternion hRotation;      // カメラの水平回転
 
+    public float camera_x_MaxLimit = 0.5f;
+    public float camera_x_MinLimit = -0.5f;
+
+    [SerializeField, Header("ワールドの値(0.4くらいで)")]
+    public float camera_w_Limit = 0.4f;
+
     void Start()
     {
         // 回転の初期化
@@ -58,6 +64,19 @@ public class PlayerFollowCamera : MonoBehaviour
         }
 
         hRotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * turnSpeed, 0);
+        vRotation *= Quaternion.Euler(Input.GetAxis("Mouse Y") * turnSpeed / 2, 0, 0);
+
+        if (vRotation.x < camera_x_MinLimit && vRotation.w < camera_w_Limit) 
+        {
+            vRotation.x = camera_x_MinLimit;
+            vRotation.w = camera_w_Limit;
+        }
+        if (vRotation.x > camera_x_MaxLimit && vRotation.w < camera_w_Limit)
+        {
+            vRotation.x = camera_x_MaxLimit;
+            vRotation.w = camera_w_Limit;
+        }
+
 
         // カメラの回転(transform.rotation)の更新
         // 方法1 : 垂直回転してから水平回転する合成回転とします
