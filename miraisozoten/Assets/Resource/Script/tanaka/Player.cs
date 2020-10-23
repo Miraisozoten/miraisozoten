@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
                     {
                         //Debug.Log(hitInfo);
                         col.height = orgColHight - RollHeight;          // 調整されたコライダーの高さ
-                        float adjCenterY = orgVectColCenter.y + RollHeight / Rollweight;
+                        float adjCenterY = orgVectColCenter.y;
                         col.center = new Vector3(0, adjCenterY, 0); // 調整されたコライダーのセンター
                     }
                     else
