@@ -7,16 +7,22 @@ using UnityEngine.UI;
 
 public class PlayerStatusComponent : StatusComponent
 {
-    [SerializeField, Header("HP_Icon")]
+    //Gauge
+    //[SerializeField, Header("HP-Gauge")]
+    //public Slider HP_Gauge;
+    //[SerializeField, Header("HP-Color")]
+    //public Image BerImage;
+    //[SerializeField, Header("体力減少速度/s")]
+    //public float HP_Decrease;
+    //[SerializeField, Header("最大体力(ゲージ)")]
+    //public float HP_Max_Gauge;
+    /////////////////////////////////////////////////////////////
+
+    //Icon
+    [SerializeField, Header("HP量")]
     public float HP_Icon;
-    [SerializeField, Header("HP-Gauge")]
-    public Slider HP_Gauge;
-    [SerializeField, Header("HP-Color")]
-    public Image BerImage;
-    [SerializeField, Header("体力減少速度/s")]
-    public float HP_Decrease;
-    [SerializeField, Header("最大体力(ゲージ)")]
-    public float HP_Max_Gauge;
+    [SerializeField, Header("エキス量")]
+    public int ExtractPoint_Icon;
     [SerializeField, Header("体力減少量/ハート半分")]
     public int HP_Amount;
     [SerializeField, Header("最大体力(アイコン数)")]
@@ -26,14 +32,24 @@ public class PlayerStatusComponent : StatusComponent
     [SerializeField, Header("体力アイコン右")]
     public GameObject RightIcon;
     [SerializeField, Header("体力アイコンパネル")]
-    public GameObject IconPanel;
+    public GameObject HpIconPanel;
+
+    [SerializeField, Header("最大エキス(アイコン数)")]
+    public int Ex_Max_Icon;
+    [SerializeField, Header("エキスアイコン")]
+    public GameObject ExPointIcon;
+    [SerializeField, Header("エキスアイコンパネル")]
+    public GameObject ExPanel;
+    /////////////////////////////////////////////////////////////
 
     //[SerializeField, Header("カラーG")]
     private float Color_G;
     //[SerializeField, Header("カラーR")]
     private float Color_R;
-    [SerializeField, Header("アイコンリスト")]
+    [SerializeField, Header("HPアイコンリスト")]
     public List<GameObject> LifeList;
+    [SerializeField, Header("エキスアイコンリスト")]
+    public List<GameObject> ExList;
     [SerializeField, Header("アイコン減少ボタン間隔/s")]
     public float ButtonInterval;
     private float Timebutton;
@@ -50,13 +66,18 @@ public class PlayerStatusComponent : StatusComponent
     void Start()
     {
         //HP = 100;
-        HP = HP_Max_Gauge;
+        //HP = HP_Max_Gauge;
         HP_Icon = HP_Max_Icon;
+        ExtractPoint_Icon = 0;
 
         for (int i = 0; i < HP_Max_Icon; i++)
         {
-            LifeList.Add(Instantiate<GameObject>(LeftIcon, IconPanel.transform));
-            LifeList.Add(Instantiate<GameObject>(RightIcon, IconPanel.transform));
+            LifeList.Add(Instantiate<GameObject>(LeftIcon, HpIconPanel.transform));
+            LifeList.Add(Instantiate<GameObject>(RightIcon, HpIconPanel.transform));
+        }
+        for (int i = 0; i < Ex_Max_Icon; i++)
+        {
+            ExList.Add(Instantiate<GameObject>(ExPointIcon, ExPanel.transform));
         }
 
         anim = GetComponent<Animator>();
@@ -83,11 +104,13 @@ public class PlayerStatusComponent : StatusComponent
 
         if (Input.GetKey(KeyCode.F1))
         {
-            HP += HP_Decrease * Time.fixedDeltaTime;
+            ExpUp();
+            //HP += HP_Decrease * Time.fixedDeltaTime;
         }
         if (Input.GetKey(KeyCode.F2))
         {
-            HP -= HP_Decrease * Time.fixedDeltaTime;
+            ExpDown();
+            //HP -= HP_Decrease * Time.fixedDeltaTime;
         }
         if (Input.GetKey(KeyCode.F3) && Timebutton > ButtonInterval)
         {
@@ -120,7 +143,6 @@ public class PlayerStatusComponent : StatusComponent
 
         if (HP_Max_Icon >= HP_Icon)
         {
-            IconAll();
         }
         else
         {
@@ -131,23 +153,29 @@ public class PlayerStatusComponent : StatusComponent
             IconReset();
         }
 
-        GaugeAll();
+        if (ExtractPoint_Icon > Ex_Max_Icon)
+        {
+            ExtractPoint_Icon = Ex_Max_Icon;
+        }
+        //GaugeAll();
+        IconAll();
+
     }
 
     void GaugeAll()
     {
-        HP_Gauge.value = HP / HP_Max_Gauge;
-        Color_G = 2.0f - (1.0f - HP_Gauge.value) * 2;
-        Color_R = 2.0f - HP_Gauge.value * 2;
-        BerImage.color = new Vector4(Color_R, Color_G, 0, BerImage.color.a);
-        if (HP > HP_Max_Gauge)
-        {
-            HP = HP_Max_Gauge;
-        }
-        if (HP < 0)
-        {
-            HP = 0;
-        }
+        //HP_Gauge.value = HP / HP_Max_Gauge;
+        //Color_G = 2.0f - (1.0f - HP_Gauge.value) * 2;
+        //Color_R = 2.0f - HP_Gauge.value * 2;
+        //BerImage.color = new Vector4(Color_R, Color_G, 0, BerImage.color.a);
+        //if (HP > HP_Max_Gauge)
+        //{
+        //    HP = HP_Max_Gauge;
+        //}
+        //if (HP < 0)
+        //{
+        //    HP = 0;
+        //}
     }
 
     void IconAll()
@@ -172,18 +200,18 @@ public class PlayerStatusComponent : StatusComponent
                     }
                 }
             }
-            //if (IconPanel.transform.childCount > HP_Icon)
+            //if (HpIconPanel.transform.childCount > HP_Icon)
             //{
-            //    for (int i = IconPanel.transform.childCount; i > HP_Icon; i--)
+            //    for (int i = HpIconPanel.transform.childCount; i > HP_Icon; i--)
             //    {
             //        //　ライフゲージoff
             //        LifeList[i].SetActive(false);
-            //        //Destroy(IconPanel.transform.GetChild(i).gameObject);
+            //        //Destroy(HpIconPanel.transform.GetChild(i).gameObject);
             //        //Destroy(transform.GetChild(transform.childCount - 1 - i).gameObject);
             //    }
-            //}else if(IconPanel.transform.childCount < HP_Icon)
+            //}else if(HpIconPanel.transform.childCount < HP_Icon)
             //{
-            //    for (int i = IconPanel.transform.childCount; i > HP_Icon; i--)
+            //    for (int i = HpIconPanel.transform.childCount; i > HP_Icon; i--)
             //    {
             //        //　ライフゲージoff
             //        LifeList[i].SetActive(false);
@@ -198,6 +226,37 @@ public class PlayerStatusComponent : StatusComponent
         {
             HP_Icon = 0;
         }
+
+        //ExtractPoint_Icon変動時
+        if (ExtractPoint_Icon >= 0)
+        {
+            for (int i = 0; i < ExList.Count; i++)
+            {
+                if (i < ExtractPoint_Icon)
+                {
+                    if (ExList[i].active == false)
+                    {
+                        ExList[i].SetActive(true);
+                    }
+                }
+                else
+                {
+                    if (ExList[i].active == true)
+                    {
+                        ExList[i].SetActive(false);
+                    }
+                }
+            }
+        }
+        if (ExtractPoint_Icon > Ex_Max_Icon)
+        {
+            ExtractPoint_Icon = Ex_Max_Icon;
+        }
+        if (ExtractPoint_Icon < 0)
+        {
+            ExtractPoint_Icon = 0;
+        }
+
     }
 
     void IconReset()
@@ -208,15 +267,15 @@ public class PlayerStatusComponent : StatusComponent
         //HP設定
         HP_Icon = HP_Max_Icon;
         //削除
-        for (int i = 0; i < IconPanel.transform.childCount; i++)
+        for (int i = 0; i < HpIconPanel.transform.childCount; i++)
         {
-            Destroy(IconPanel.transform.GetChild(i).gameObject);
+            Destroy(HpIconPanel.transform.GetChild(i).gameObject);
         }
         //生成
         for (int i = 0; i < HP_Max_Icon; i++)
         {
-            LifeList.Add(Instantiate<GameObject>(LeftIcon, IconPanel.transform));
-            LifeList.Add(Instantiate<GameObject>(RightIcon, IconPanel.transform));
+            LifeList.Add(Instantiate<GameObject>(LeftIcon, HpIconPanel.transform));
+            LifeList.Add(Instantiate<GameObject>(RightIcon, HpIconPanel.transform));
         }
     }
 
@@ -237,6 +296,22 @@ public class PlayerStatusComponent : StatusComponent
         }
 
         return false;
+    }
+
+    //エキス上昇(1メモリ)
+    public void ExpUp()
+    {
+        ExtractPoint_Icon += 1;
+    }
+    //エキス減少(1メモリ)
+    public void ExpDown()
+    {
+        ExtractPoint_Icon -= 1;
+    }
+    //現在のエキス量
+    public int ExpNow()
+    {
+        return ExtractPoint_Icon;
     }
 }
 
