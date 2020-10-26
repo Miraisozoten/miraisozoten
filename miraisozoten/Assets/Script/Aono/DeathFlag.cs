@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class DeathFlag : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    CountDown script;
+
+    
 
     void OnCollisionEnter(Collision other)
     {
-
-        Debug.Log("a");
-
         if (other.gameObject.tag == "Player")
         {
+            if (this.gameObject.tag == "Boss")
+            {
+               script.Hoge();   
+            }
+
             Destroy(this.gameObject);
         }
     }
