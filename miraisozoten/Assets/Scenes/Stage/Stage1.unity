@@ -1476,6 +1476,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &629758891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1729145276627119719, guid: 42b486b521203074d97305487e63e845,
+    type: 3}
+  m_PrefabInstance: {fileID: 1849786383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &677629519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 79674db77adfc4d6f9f17fb043493b1e,
@@ -4098,7 +4104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c41a891e9f34d4eb02cee9e8cebb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObj: {fileID: 0}
+  PlayerObj: {fileID: 629758891}
   GameoverObj: {fileID: 241941557}
   GameclearObj: {fileID: 2101804377}
   SceneManager: {fileID: 1567660644}

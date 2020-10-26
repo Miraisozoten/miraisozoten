@@ -4630,6 +4630,21 @@ PrefabInstance:
       propertyPath: RollSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: attackState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: idleState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: attackspState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x

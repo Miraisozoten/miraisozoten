@@ -22,18 +22,18 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
 
     public Animator anim;                          // キャラにアタッチされるアニメーターへの参照
-    private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
+    private AnimatorStateInfo currentBaseState;         // base layerで使われる、アニメーターの現在の状態の参照
 
     // アニメーター各ステートへの参照
+    [SerializeField, Header("idle hash")]
     static int idleState = Animator.StringToHash("Base Layer.Idle");
     static int runState = Animator.StringToHash("Base Layer.Run");
     static int runstopState = Animator.StringToHash("Base Layer.Run to stop");
     static int rollState = Animator.StringToHash("Base Layer.Roll");
     static int attackState = Animator.StringToHash("Base Layer.Attack");
-    static int attacksoftState = Animator.StringToHash("Base Layer.Attack");
-    static int attackhardState = Animator.StringToHash("Base Layer.Attack");
-    [SerializeField]
-    public int attackspState = Animator.StringToHash("Attack All.Attack sp");
+    static int attacksoftState = Animator.StringToHash("Attack All.Attack");
+    static int attackhardState = Animator.StringToHash("Attack All.Attack");
+    static int attackspState = Animator.StringToHash("Attack All.Attack sp");
 
     // CapsuleColliderで設定されているコライダのHeiht、Centerの初期値を収める変数
     private float orgColHight;
@@ -66,10 +66,18 @@ public class Player : MonoBehaviour
         // Animatorコンポーネントを取得する
         anim = GetComponent<Animator>();
 
+        idleState = Animator.StringToHash("Base Layer.Idle");
+        attackspState = Animator.StringToHash("Attack All.Attack SP");
     }
 
-    void FixedUpdate()
+void FixedUpdate()
     {
+        Debug.Log(currentBaseState.nameHash);
+
+        if (currentBaseState.nameHash == attackspState)
+        {
+            Debug.Log("aaaaaaaaaaa");
+        }
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
         float v = 0;
@@ -209,6 +217,16 @@ public class Player : MonoBehaviour
         if (currentBaseState.nameHash == attackspState)
         {
             Debug.Log("SP");
+            return true;
+        }
+        if (currentBaseState.nameHash == attacksoftState)
+        {
+            Debug.Log("弱攻撃");
+            return true;
+        }
+        if (currentBaseState.nameHash == attackhardState)
+        {
+            Debug.Log("強攻撃");
             return true;
         }
         return false;
