@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 0e22f5a80d1c8fd478a5d3f34c61c05b
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 1
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: tekitou3(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: tekitou3(Clone)
+      position: {x: -0, y: 0.10160022, z: -0.004901468}
+      rotation: {x: -0.09459732, y: -0.7007506, z: 0.09459732, w: 0.7007506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowerBody
+      parentName: root
+      position: {x: -0.040007256, y: 0.011001989, z: -1.6725322e-17}
+      rotation: {x: -1.1102232e-16, y: -1.0755286e-16, z: 0.14330493, w: 0.9896786}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_rower1
+      parentName: LowerBody
+      position: {x: -0.013367911, y: -0.0072647487, z: -0.08598329}
+      rotation: {x: -6.9388946e-17, y: -9.714452e-17, z: 0.48591968, w: 0.8740035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_rower2
+      parentName: R_rower1
+      position: {x: -0.08837451, y: -1.4210854e-16, z: -0.000000003699014}
+      rotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail1
+      parentName: LowerBody
+      position: {x: -0.04814881, y: 0.011622128, z: -2.3245233e-17}
+      rotation: {x: -2.220446e-16, y: -2.0469738e-16, z: 0.090120725, w: 0.99593085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail2
+      parentName: Tail1
+      position: {x: -0.05071683, y: 0.0033638694, z: -2.028837e-17}
+      rotation: {x: -7.632783e-17, y: -1.110223e-16, z: 0.22290932, w: 0.9748392}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail3
+      parentName: Tail2
+      position: {x: -0.06046228, y: 0.0051677166, z: -2.6645352e-17}
+      rotation: {x: 0, y: 0, z: 0.07572041, w: 0.99712914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_rower1
+      parentName: LowerBody
+      position: {x: -0.013367884, y: -0.007264777, z: 0.08598329}
+      rotation: {x: -9.714452e-17, y: 6.9388946e-17, z: 0.8740035, w: -0.48591968}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_rower2
+      parentName: L_rower1
+      position: {x: 0.088374496, y: 0, z: 0}
+      rotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperBody
+      parentName: root
+      position: {x: 0.050509155, y: -0.013890023, z: 2.4115777e-17}
+      rotation: {x: 0.15516062, y: 0.9878893, z: -0, w: 0}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_upper1
+      parentName: UpperBody
+      position: {x: -0.0197441, y: -0.017337162, z: 0.07211269}
+      rotation: {x: 0.74366856, y: 0.28385955, z: -0.5835111, w: 0.16092125}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_upper2
+      parentName: R_upper1
+      position: {x: -0.07506611, y: -0.007193781, z: 1.533029e-10}
+      rotation: {x: 0, y: -0, z: -0.5704096, w: 0.82136047}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_upper1
+      parentName: UpperBody
+      position: {x: -0.019744102, y: -0.017337186, z: -0.072112694}
+      rotation: {x: -0.2838596, y: 0.74366856, z: 0.16092114, w: 0.5835111}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_upper2
+      parentName: L_upper1
+      position: {x: 0.0750661, y: 0.0071938015, z: -8.881784e-18}
+      rotation: {x: 0, y: -0, z: -0.5704096, w: 0.82136047}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head1
+      parentName: UpperBody
+      position: {x: -0.013797398, y: 0.031466976, z: -8.172134e-18}
+      rotation: {x: 6.2727605e-15, y: -1.7277847e-15, z: -0.28076175, w: 0.95977753}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head2
+      parentName: Head1
+      position: {x: -0.085318476, y: -0.00025932645, z: -1.3322676e-17}
+      rotation: {x: 0.13227455, y: 0.99121314, z: 9.8164633e-17, w: -2.7268833e-16}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Muscat:Muscat
+      parentName: tekitou3(Clone)
+      position: {x: 0.000000005872201, y: 0.07807937, z: -0.01994482}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
