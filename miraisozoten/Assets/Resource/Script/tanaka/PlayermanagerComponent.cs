@@ -75,4 +75,21 @@ public class PlayermanagerComponent : MonoBehaviour
         sceneManagerCom.GameClear();
         GameclearCom.GameclrImageOn();
     }
+
+    //現在のエキス
+    public int NowExtraExtractPointct()
+    {
+        return PlayerStatusCom.ExpNow();
+    }
+
+    //エキス上昇
+    public void ExtractPointUp()
+    {
+        PlayerStatusCom.ExpUp();
+    }
+    //エキス減少
+    public void ExtractPointDown()
+    {
+        PlayerStatusCom.ExpDown();
+    }
 }
