@@ -94,6 +94,9 @@ public class PlayerStatusComponent : StatusComponent
         if (anim.GetBool("Attack"))
         {
             anim.SetBool("Attack", false);
+            anim.SetBool("Attack soft", false);
+            anim.SetBool("Attack hard", false);
+            anim.SetBool("Attack sp", false);
         }
         if (anim.GetBool("Roll"))
         {
@@ -123,9 +126,20 @@ public class PlayerStatusComponent : StatusComponent
             HP_Icon -= HP_Amount * 0.5f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetMouseButtonDown(1))
         {
             anim.SetBool("Attack", true);
+            anim.SetBool("Attack hard", true);
+        }
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
+        {
+            anim.SetBool("Attack", true);
+            anim.SetBool("Attack soft", true);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            anim.SetBool("Attack", true);
+            anim.SetBool("Attack sp", true);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -296,6 +310,12 @@ public class PlayerStatusComponent : StatusComponent
         }
 
         return false;
+    }
+
+    //HP減少(減少量 float)
+    public void HPDown(float damage)
+    {
+        HP_Icon -= damage;
     }
 
     //エキス上昇(1メモリ)

@@ -30,6 +30,10 @@ public class Player : MonoBehaviour
     static int runstopState = Animator.StringToHash("Base Layer.Run to stop");
     static int rollState = Animator.StringToHash("Base Layer.Roll");
     static int attackState = Animator.StringToHash("Base Layer.Attack");
+    static int attacksoftState = Animator.StringToHash("Base Layer.Attack");
+    static int attackhardState = Animator.StringToHash("Base Layer.Attack");
+    [SerializeField]
+    public int attackspState = Animator.StringToHash("Attack All.Attack sp");
 
     // CapsuleColliderで設定されているコライダのHeiht、Centerの初期値を収める変数
     private float orgColHight;
@@ -200,6 +204,11 @@ public class Player : MonoBehaviour
     {
         if (currentBaseState.nameHash == attackState)
         {
+            return true;
+        }
+        if (currentBaseState.nameHash == attackspState)
+        {
+            Debug.Log("SP");
             return true;
         }
         return false;
