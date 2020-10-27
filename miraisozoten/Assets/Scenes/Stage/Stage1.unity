@@ -320,8 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 808711828}
-  EnemyNum: 10
-  RespawnX: 5
+  EnemyNum: 20
+  RespawnX: 10
   RespawnY: 5
   RespawnZ: 0
   RandamRange_Tops: 10
