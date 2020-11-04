@@ -30,11 +30,14 @@ public class PlayermanagerComponent : MonoBehaviour
         GameoverCom = GameoverObj.GetComponent<GameOverComponent>();
         GameclearCom = GameclearObj.GetComponent<GameClearComponent>();
         sceneManagerCom = SceneManager.GetComponent<SceneManage>();
-        enemycount = 10;
 
         gameoverFlag = false;
         gameclearFlag = false;
         resetFlag = false;
+
+        //enemycount = 10;
+
+        enemycount = GameObject.FindGameObjectsWithTag("Boss").Length;
 
     }
 
@@ -91,5 +94,10 @@ public class PlayermanagerComponent : MonoBehaviour
     public void ExtractPointDown()
     {
         PlayerStatusCom.ExpDown();
+    }
+
+    public void EnemyCountSet()
+    {
+
     }
 }
