@@ -28,6 +28,9 @@ public class PlayerFollowCamera : MonoBehaviour
     [SerializeField, Header("ワールドの値(0.4くらいで)")]
     public float camera_w_Limit = 0.4f;
 
+    [SerializeField, Header("マウスカメラ操作ONOFF")]
+    static bool MouseComeraflag = true;
+
     void Start()
     {
         // 回転の初期化
@@ -62,9 +65,16 @@ public class PlayerFollowCamera : MonoBehaviour
         {
             hRotation *= Quaternion.Euler(0, 1 * turnSpeed, 0);
         }
-
-        hRotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * turnSpeed, 0);
-        vRotation *= Quaternion.Euler(Input.GetAxis("Mouse Y") * turnSpeed / 2, 0, 0);
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (MouseComeraflag) MouseComeraflag = false;
+            else MouseComeraflag = true;
+        }
+        if (MouseComeraflag)
+        {
+            hRotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * turnSpeed, 0);
+            vRotation *= Quaternion.Euler(Input.GetAxis("Mouse Y") * -turnSpeed / 2, 0, 0);
+        }
 
         if (vRotation.x < camera_x_MinLimit && vRotation.w < camera_w_Limit) 
         {
