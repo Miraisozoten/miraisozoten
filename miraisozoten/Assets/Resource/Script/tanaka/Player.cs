@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
     public float useCurvesHeight = 0.5f;        // カーブ補正の有効高さ（地面をすり抜けやすい時には大きくする）
 
     float speed;
+    float v = 0;
 
     [SerializeField, Header("Roll時の高さ")]
     public float Rollweight;
@@ -79,9 +80,9 @@ void FixedUpdate()
     {
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
-        float v = 0;
 
         speed = moveSpeed;
+        v = 0;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -128,7 +129,7 @@ void FixedUpdate()
             anim.SetBool("HitChack", true);
         }
 
-        if (IsAttack())
+        if (IsAttack()||IsHit())
         {
             speed = 0.0f;
         }else if (IsRoll())
@@ -224,6 +225,14 @@ void FixedUpdate()
             //    //anim.SetBool ("Rest", true);
             //}
         }
+        else if (currentBaseState.nameHash == Hit1State || currentBaseState.nameHash == Hit2State || currentBaseState.nameHash == Hit3State) 
+        {
+            Debug.Log("a");
+            if (anim.GetBool("HitChack"))
+            {
+                anim.SetBool("HitChack", false);
+            }
+        }
 
         if (anim.IsInTransition(0))
         {
@@ -241,6 +250,14 @@ void FixedUpdate()
         }
     }
 
+    public bool IsHit()
+    {
+        if (currentBaseState.nameHash == Hit1State || currentBaseState.nameHash == Hit2State || currentBaseState.nameHash == Hit3State)
+        {
+            return true;
+        }
+        return false;
+    }
     public bool IsRoll()
     {
         if (currentBaseState.nameHash == rollState)
@@ -279,5 +296,24 @@ void FixedUpdate()
         // コンポーネントのHeight、Centerの初期値を戻す
         col.height = orgColHight;
         col.center = orgVectColCenter;
+    }
+
+    //のけぞり処理
+    void HitEnemyAttack()
+    {
+        anim.SetBool("HitChack", true);
+        anim.SetInteger("HitNumber", 3);
+    }
+
+    //敵との当たり判定
+    //void OnCollisionEnter(Collider col)
+    void OnTriggerEnter(Collider col)
+    {
+        if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy")
+        {
+            Debug.Log("aa");
+            v = 0.0f;
+            HitEnemyAttack();
+        }
     }
 }
