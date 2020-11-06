@@ -25,15 +25,20 @@ public class Player : MonoBehaviour
     private AnimatorStateInfo currentBaseState;         // base layerで使われる、アニメーターの現在の状態の参照
 
     // アニメーター各ステートへの参照
-    [SerializeField, Header("idle hash")]
-    static int idleState = Animator.StringToHash("Base Layer.Idle");
-    static int runState = Animator.StringToHash("Base Layer.Run");
-    static int runstopState = Animator.StringToHash("Base Layer.Run to stop");
-    static int rollState = Animator.StringToHash("Base Layer.Roll");
-    static int attackState = Animator.StringToHash("Base Layer.Attack");
-    static int attacksoftState = Animator.StringToHash("Attack All.Attack");
-    static int attackhardState = Animator.StringToHash("Attack All.Attack");
-    static int attackspState = Animator.StringToHash("Attack All.Attack sp");
+    //[SerializeField, Header("idle hash")]
+    static int idleState = Animator.StringToHash("Nomal Layer.Idle");
+    static int runState = Animator.StringToHash("Nomal Layer.Run");
+    static int runstopState = Animator.StringToHash("Nomal Layer.Run to stop");
+    static int rollState = Animator.StringToHash("Attack Layer.Roll");
+    static int attackState = Animator.StringToHash("Attack Layer.Attack");
+    static int attacksoftState = Animator.StringToHash("Attack Layer.Attack soft");
+    static int attackhardState = Animator.StringToHash("Attack Layer.Attack hard");
+    static int attackspState = Animator.StringToHash("Attack Layer.Attack SP");
+    static int HitState = Animator.StringToHash("Hit Layer.Hit");
+    static int Hit1State = Animator.StringToHash("Hit Layer.Hit1");
+    static int Hit2State = Animator.StringToHash("Hit Layer.Hit2");
+    static int Hit3State = Animator.StringToHash("Hit Layer.Hit3");
+    static int StandUpState = Animator.StringToHash("Hit Layer.StandUp");
 
     // CapsuleColliderで設定されているコライダのHeiht、Centerの初期値を収める変数
     private float orgColHight;
@@ -66,18 +71,12 @@ public class Player : MonoBehaviour
         // Animatorコンポーネントを取得する
         anim = GetComponent<Animator>();
 
-        idleState = Animator.StringToHash("Base Layer.Idle");
-        attackspState = Animator.StringToHash("Attack All.Attack SP");
+        //idleState = Animator.StringToHash("Base Layer.Idle");
+        //attackspState = Animator.StringToHash("Attack All.Attack SP");
     }
 
 void FixedUpdate()
     {
-        Debug.Log(currentBaseState.nameHash);
-
-        if (currentBaseState.nameHash == attackspState)
-        {
-            Debug.Log("aaaaaaaaaaa");
-        }
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
         float v = 0;
@@ -104,6 +103,31 @@ void FixedUpdate()
             velocity.x += 1;
             v = 1;
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            anim.SetBool("Attack", true);
+            anim.SetBool("Attack hard", true);
+        }
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("a");
+            anim.SetBool("Attack", true);
+            anim.SetBool("Attack soft", true);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            anim.SetBool("Attack", true);
+            anim.SetBool("Attack sp", true);
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            anim.SetBool("Roll", true);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            anim.SetBool("HitChack", true);
+        }
+
         if (IsAttack())
         {
             speed = 0.0f;
@@ -112,14 +136,18 @@ void FixedUpdate()
             speed = RollSpeed;
         }
 
+        SetAnimation(v);
+        
+    }
+
+    void SetAnimation(float v)
+    {
+
         // 速度ベクトルの長さを1秒でmoveSpeedだけ進むように調整します
         velocity = velocity.normalized * speed * Time.deltaTime;
         anim.SetFloat("Speed", v);                          // Animator側で設定している"Speed"パラメタにvを渡す
 
-
         currentBaseState = anim.GetCurrentAnimatorStateInfo(0);	// 参照用のステート変数にBase Layer (0)の現在のステートを設定する
-
-
 
         // いずれかの方向に移動している場合
         if (velocity.magnitude > 0)
@@ -183,7 +211,7 @@ void FixedUpdate()
             }
         }
         // 現在のベースレイヤーがidleStateの時
-        else if (currentBaseState.nameHash == idleState || currentBaseState.nameHash == runState) 
+        else if (currentBaseState.nameHash == idleState || currentBaseState.nameHash == runState)
         {
             //カーブでコライダ調整をしている時は、念のためにリセットする
             if (useCurves)
@@ -197,6 +225,20 @@ void FixedUpdate()
             //}
         }
 
+        if (anim.IsInTransition(0))
+        {
+            if (anim.GetBool("Attack"))
+            {
+                anim.SetBool("Attack", false);
+                anim.SetBool("Attack soft", false);
+                anim.SetBool("Attack hard", false);
+                anim.SetBool("Attack sp", false);
+            }
+            if (anim.GetBool("Roll"))
+            {
+                anim.SetBool("Roll", false);
+            }
+        }
     }
 
     public bool IsRoll()

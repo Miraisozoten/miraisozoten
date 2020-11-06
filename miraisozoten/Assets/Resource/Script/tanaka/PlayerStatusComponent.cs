@@ -58,10 +58,11 @@ public class PlayerStatusComponent : StatusComponent
     public GameObject WeaponObj;
     private BoxCollider WeaponColider;
 
-    private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
-    private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
+    //private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
+    //private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
 
     private Player playerCom;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +81,7 @@ public class PlayerStatusComponent : StatusComponent
             ExList.Add(Instantiate<GameObject>(ExPointIcon, ExPanel.transform));
         }
 
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
 
         WeaponColider = WeaponObj.GetComponent<BoxCollider>();
         WeaponColider.enabled = false;
@@ -91,17 +92,6 @@ public class PlayerStatusComponent : StatusComponent
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (anim.GetBool("Attack"))
-        {
-            anim.SetBool("Attack", false);
-            anim.SetBool("Attack soft", false);
-            anim.SetBool("Attack hard", false);
-            anim.SetBool("Attack sp", false);
-        }
-        if (anim.GetBool("Roll"))
-        {
-            anim.SetBool("Roll", false);
-        }
 
         Timebutton += Time.fixedDeltaTime;
 
@@ -126,25 +116,6 @@ public class PlayerStatusComponent : StatusComponent
             HP_Icon -= HP_Amount * 0.5f;
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            anim.SetBool("Attack", true);
-            anim.SetBool("Attack hard", true);
-        }
-        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
-        {
-            anim.SetBool("Attack", true);
-            anim.SetBool("Attack soft", true);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            anim.SetBool("Attack", true);
-            anim.SetBool("Attack sp", true);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            anim.SetBool("Roll", true);
-        }
 
         if (playerCom.IsAttack())
         {
