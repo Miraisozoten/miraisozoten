@@ -321,6 +321,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 808711828}
   EnemyNum: 20
+  OriginObject2: {fileID: 0}
+  EnemyNum2: 0
+  OriginObject3: {fileID: 0}
+  EnemyNum3: 0
+  OriginObject4: {fileID: 0}
+  EnemyNum4: 0
   RespawnX: 10
   RespawnY: 5
   RespawnZ: 0
@@ -3621,6 +3627,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21152d00cd62fc144b2e889b6bdc3f16, type: 3}
+--- !u!1 &1329661627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329661629}
+  - component: {fileID: 1329661628}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1329661628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329661627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1488759694545549b38b8b089870be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playing: 0
+  SoundName: "BGM/\u30B9\u30C6\u30FC\u30B81\u30DC\u30B9\u6226.mp3"
+--- !u!4 &1329661629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329661627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358262177
 GameObject:
   m_ObjectHideFlags: 0
