@@ -230,14 +230,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669322390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f7fa6aa2ee00a478bdf6b55e8ad245, type: 3}
+  m_Script: {fileID: 11500000, guid: a1488759694545549b38b8b089870be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volume:
-    bgm: 1
-    se: 1
-    mute: 0
-  Path: /AudioManager/Resources
+  playing: 0
+  SoundName: BGM/BGM_Title.mp3
 --- !u!4 &1669322392
 Transform:
   m_ObjectHideFlags: 0
