@@ -3466,18 +3466,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1464718576 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6982011494303119748, guid: a5dd5651c0a4a1242a3a388994bb881f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099248657}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1567660644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,18 +4615,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 0}
---- !u!114 &2093560872 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6982011494375009073, guid: a5dd5651c0a4a1242a3a388994bb881f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099248657}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2101804377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,26 +4727,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1963078669103211226, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: HP_Gauge
-      value: 
-      objectReference: {fileID: 2093560872}
-    - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: BerImage
-      value: 
-      objectReference: {fileID: 1464718576}
-    - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: IconPanel
-      value: 
-      objectReference: {fileID: 142778222}
     - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: HpIconPanel
@@ -4778,20 +4734,9 @@ PrefabInstance:
       objectReference: {fileID: 142778222}
     - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
         type: 3}
-      propertyPath: ExPointIcon
-      value: 
-      objectReference: {fileID: 2276649526293578615, guid: 3d8d8b7dc737d0e4e832eb449aa765fb,
-        type: 3}
-    - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
       propertyPath: ExPanel
       value: 
       objectReference: {fileID: 264454650}
-    - target: {fileID: 1963078669103211227, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: Ex_Max_Icon
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: refCamera
@@ -4802,26 +4747,6 @@ PrefabInstance:
       propertyPath: cameraObject
       value: 
       objectReference: {fileID: 677629519}
-    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: RollSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: attackState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: idleState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
-        type: 3}
-      propertyPath: attackspState
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x

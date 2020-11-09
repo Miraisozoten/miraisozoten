@@ -388,7 +388,7 @@ MonoBehaviour:
   useCurves: 1
   useCurvesHeight: 0.5
   Rollweight: 1
-  RollSpeed: 6
+  RollSpeed: 10
 --- !u!114 &1963078669103211227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,18 +403,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   HP_Icon: 0
-  HP_Gauge: {fileID: 0}
-  BerImage: {fileID: 0}
-  HP_Decrease: 10
-  HP_Max_Gauge: 100
+  ExtractPoint_Icon: 0
   HP_Amount: 1
   HP_Max_Icon: 10
   LeftIcon: {fileID: 7441944414681830575, guid: 0d75e0f2a82339149b771df545f02c95,
     type: 3}
   RightIcon: {fileID: 6809668635015285737, guid: 727fce4323068d74aa6add581c539473,
     type: 3}
-  IconPanel: {fileID: 0}
+  HpIconPanel: {fileID: 0}
+  Ex_Max_Icon: 10
+  ExPointIcon: {fileID: 2276649526293578615, guid: 3d8d8b7dc737d0e4e832eb449aa765fb,
+    type: 3}
+  ExPanel: {fileID: 0}
   LifeList: []
+  ExList: []
   ButtonInterval: 0.2
   WeaponObj: {fileID: 1963078669404921240}
 --- !u!1 &1810838330295914864
