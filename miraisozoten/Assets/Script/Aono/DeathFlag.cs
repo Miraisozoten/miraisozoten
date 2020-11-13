@@ -7,7 +7,8 @@ public class DeathFlag : MonoBehaviour
     [SerializeField]
     CountDown script;
 
-    
+    [SerializeField, Header("HP")]
+    public int HitPoint;
 
     void OnCollisionEnter(Collision other)
     {
@@ -18,7 +19,7 @@ public class DeathFlag : MonoBehaviour
                script.Hoge();   
             }
 
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
         }
     }
 
