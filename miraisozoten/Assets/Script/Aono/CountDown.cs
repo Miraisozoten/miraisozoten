@@ -12,7 +12,7 @@ public class CountDown : MonoBehaviour
     [SerializeField]
     int StageNum;
 
-    bool ClearFlag = false;
+    bool Flag = false;
 
     //public Text timeText;
 
@@ -23,9 +23,13 @@ public class CountDown : MonoBehaviour
 
     GameObject game;
 
+
+
     void Start()
     {
         game = GameObject.Find("SceneManager");
+
+        Flag = script.GetComponent<SceneManage>().ClearFlag;
     }
 
 
@@ -69,24 +73,33 @@ public class CountDown : MonoBehaviour
 
     public void Hoge()
     {
+        Flag = true;
         Invoke("GoResult", 3);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //bool Flag = script.GetComponent<SceneManage>().ClearFlag;
 
-        if (ClearFlag == false)
+
+        if (Flag == false)
         {
             //timeText.text = "Please Space";
         }
 
-        if (ClearFlag == true)
+        if (Flag == true)
         {
             ClearTime += Time.deltaTime;
 
             //timeText.text = ClearTime.ToString("f1") + "秒";
+
+            sprite = Resources.Load<Sprite>("ramen");
+            image = image.GetComponent<Image>();
+            image.sprite = sprite;
         }
+
+        
 
         if (ClearTime >= 5.0f)
         {
@@ -97,11 +110,11 @@ public class CountDown : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            ClearFlag = true;
+            Flag = true;
 
-            //sprite = Resources.Load<Sprite>("ramen");
-            //image = image.GetComponent<Image>();
-            //image.sprite = sprite;
+            sprite = Resources.Load<Sprite>("ramen");
+            image = image.GetComponent<Image>();
+            image.sprite = sprite;
         }
 
     }
