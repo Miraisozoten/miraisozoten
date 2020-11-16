@@ -304,5 +304,10 @@ public class PlayerStatusComponent : StatusComponent
     {
         return ExtractPoint_Icon;
     }
+
+    public bool GetWeaponCollider()
+    {
+        return WeaponColider.enabled;
+    }
 }
 

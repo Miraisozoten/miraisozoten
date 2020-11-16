@@ -9,18 +9,18 @@ public class DeathFlag : MonoBehaviour
 
     
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            if (this.gameObject.tag == "Boss")
-            {
-               script.Hoge();   
-            }
+    //void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        if (this.gameObject.tag == "Boss")
+    //        {
+    //           script.Hoge();   
+    //        }
 
-            Destroy(this.gameObject);
-        }
-    }
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()

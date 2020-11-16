@@ -6,22 +6,28 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField]
+    //[SerializeField]
     private Vector3 velocity;              // 移動方向
-    [SerializeField]
+    [SerializeField, Header("プレイヤーの移動速度")]
     private float moveSpeed = 5.0f;        // 移動速度
-    [SerializeField]
+    //[SerializeField]
     private float applySpeed = 0.2f;       // 振り向きの適用速度
-    [SerializeField]
+    //[SerializeField]
     private PlayerFollowCamera refCamera;  // カメラの水平回転を参照する用
-
+    [SerializeField, Header("メインカメラを入れる")]
     public GameObject cameraObject; // メインカメラへの参照
+    [SerializeField, Header("敵レイヤーの名前")]
+    public string EnemyLayerName;
+    [SerializeField, Header("敵との接触判定の可否")]
+    public bool Hittriger;
+
+    [SerializeField, Header("以下は触らないで")]
 
     // キャラクターコントローラ（カプセルコライダ）の参照
     private CapsuleCollider col;
     private Rigidbody rb;
 
-    public Animator anim;                          // キャラにアタッチされるアニメーターへの参照
+    private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
     private AnimatorStateInfo currentBaseState;         // base layerで使われる、アニメーターの現在の状態の参照
 
     // アニメーター各ステートへの参照
@@ -57,10 +63,12 @@ public class Player : MonoBehaviour
     [SerializeField, Header("Roll時の移動")]
     public float RollSpeed;
 
+    PlayerStatusComponent p_Status;
+
     void Start()
     {
-        cameraObject = GameObject.FindWithTag("MainCamera");
-
+        //cameraObject = GameObject.FindWithTag("MainCamera");
+        refCamera = cameraObject.GetComponent<PlayerFollowCamera>();
         // CapsuleColliderコンポーネントを取得する（カプセル型コリジョン）
         col = GetComponent<CapsuleCollider>();
         rb = GetComponent<Rigidbody>();
@@ -71,7 +79,7 @@ public class Player : MonoBehaviour
 
         // Animatorコンポーネントを取得する
         anim = GetComponent<Animator>();
-
+        p_Status = GetComponent<PlayerStatusComponent>();
         //idleState = Animator.StringToHash("Base Layer.Idle");
         //attackspState = Animator.StringToHash("Attack All.Attack SP");
     }
@@ -104,10 +112,11 @@ void FixedUpdate()
             velocity.x += 1;
             v = 1;
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && p_Status.ExpNow() > 0) 
         {
             anim.SetBool("Attack", true);
             anim.SetBool("Attack hard", true);
+            p_Status.ExpDown();
         }
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
         {
@@ -309,9 +318,9 @@ void FixedUpdate()
     //void OnCollisionEnter(Collider col)
     void OnTriggerEnter(Collider col)
     {
-        if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy")
+        if (LayerMask.LayerToName(col.gameObject.layer) == EnemyLayerName&&Hittriger)
         {
-            Debug.Log("aa");
+            Debug.Log("敵と接触");
             v = 0.0f;
             HitEnemyAttack();
         }

@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 512908819341400379}
   - component: {fileID: 512908819341400380}
+  - component: {fileID: 89343556619500301}
   m_Layer: 0
-  m_Name: 'Bip001 '
+  m_Name: Weapon_Sword
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +47,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1796737, y: 0.11845333, z: 0.1771333}
   m_Center: {x: -0.62951624, y: -0.3505366, z: -0.1302003}
+--- !u!114 &89343556619500301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512908819341400378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d742ae7b068e9a64cb8689d1b99d5369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &512908819384741522
 GameObject:
   m_ObjectHideFlags: 0

@@ -379,12 +379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ab145162ef1524aa2614860a39594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
-  moveSpeed: 5
-  applySpeed: 0.2
-  refCamera: {fileID: 0}
+  moveSpeed: 10
   cameraObject: {fileID: 0}
-  anim: {fileID: 0}
+  EnemyLayerName: Enemy
+  Hittriger: 0
+  col: {fileID: 0}
   useCurves: 1
   useCurvesHeight: 0.5
   Rollweight: 1
@@ -2494,7 +2493,7 @@ PrefabInstance:
     - target: {fileID: 512908819341400378, guid: b13407c6a2967e34ab26558b810f46ac,
         type: 3}
       propertyPath: m_Name
-      value: 'Bip001 '
+      value: Weapon_Sword
       objectReference: {fileID: 0}
     - target: {fileID: 512908819341400379, guid: b13407c6a2967e34ab26558b810f46ac,
         type: 3}

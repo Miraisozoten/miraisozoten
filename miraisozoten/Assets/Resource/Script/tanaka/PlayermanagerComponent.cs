@@ -60,10 +60,10 @@ public class PlayermanagerComponent : MonoBehaviour
         {
             GameOver();
         }
-        else if (enemycount == 0 && !gameoverFlag) 
-        {
-            GameClear();
-        }
+        //else if (enemycount == 0 && !gameoverFlag) 
+        //{
+        //    GameClear();
+        //}
     }
 
     void GameOver()
