@@ -98,10 +98,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   player: {fileID: 0}
-  distance: 15
-  CameraHeight: 0
+  distance: 6
+  CameraHeight: -1
   vRotation: {x: 0, y: 0, z: 0, w: 0}
   hRotation: {x: 0, y: 0, z: 0, w: 0}
   camera_x_MaxLimit: 0.5
   camera_x_MinLimit: -0.5
-  camera_w_Limit: 0.4
+  camera_w_Limit: 0.7
+  playerpos_y: 2.5

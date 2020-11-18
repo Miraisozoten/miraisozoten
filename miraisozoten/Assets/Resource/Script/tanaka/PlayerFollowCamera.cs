@@ -31,6 +31,9 @@ public class PlayerFollowCamera : MonoBehaviour
     [SerializeField, Header("マウスカメラ操作ONOFF")]
     static bool MouseComeraflag = true;
 
+    [SerializeField, Header("プレイヤーの中心")]
+    public float playerpos_y ;
+
     void Start()
     {
         // 回転の初期化
@@ -97,5 +100,18 @@ public class PlayerFollowCamera : MonoBehaviour
         transform.position = player.position + new Vector3(0, 3, 0) - transform.rotation * Vector3.forward * distance;
         transform.position = new Vector3(transform.position.x, transform.position.y + CameraHeight, transform.position.z);
 
+        RaycastHit hit;
+        Vector3 centerPos = player.position;
+        centerPos.y += playerpos_y;
+
+        //Debug.Log(player.position);
+        if(Physics.Linecast(centerPos,transform.position,out hit))
+        {
+            //Debug.Log(hit.point);
+            if (hit.collider.tag != "Player" || hit.collider.tag != "Weapon")
+            {
+                transform.position = hit.point;
+            }
+        }
     }
 }
