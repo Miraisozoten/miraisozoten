@@ -1,27 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using KanKikuchi.AudioManager;
 
 // プレイヤー
 public class Player : MonoBehaviour
 {
+    enum ExActionName
+    {
+        Heal = 0,
+        Spattack,
 
-    [SerializeField]
+    };
+
+    //[SerializeField]
     private Vector3 velocity;              // 移動方向
-    [SerializeField]
+    [SerializeField, Header("プレイヤーの移動速度")]
     private float moveSpeed = 5.0f;        // 移動速度
-    [SerializeField]
+    //[SerializeField]
     private float applySpeed = 0.2f;       // 振り向きの適用速度
-    [SerializeField]
+    //[SerializeField]
     private PlayerFollowCamera refCamera;  // カメラの水平回転を参照する用
-
+    [SerializeField, Header("メインカメラを入れる")]
     public GameObject cameraObject; // メインカメラへの参照
+    [SerializeField, Header("敵レイヤーの名前")]
+    public string EnemyLayerName;
+    [SerializeField, Header("敵との接触判定の可否")]
+    public bool Hittriger;
+    [SerializeField, Header("現在のエキスアクション")]
+    public int ExAction;
+    [SerializeField, Header("エキスボタン入れる")]
+    public List<GameObject> ExButtonObj;
+
+    [SerializeField, Header("ホイール間隔")]
+    public float WheelTime;
+    float TimeCount;
+    [SerializeField, Header("ホイールトリガー")]
+    public bool WheelTrigger;
+
+
+    [SerializeField, Header("以下は触らないで")]
 
     // キャラクターコントローラ（カプセルコライダ）の参照
     private CapsuleCollider col;
     private Rigidbody rb;
 
-    public Animator anim;                          // キャラにアタッチされるアニメーターへの参照
+    private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
     private AnimatorStateInfo currentBaseState;         // base layerで使われる、アニメーターの現在の状態の参照
 
     // アニメーター各ステートへの参照
@@ -57,10 +82,12 @@ public class Player : MonoBehaviour
     [SerializeField, Header("Roll時の移動")]
     public float RollSpeed;
 
+    PlayerStatusComponent p_Status;
+
     void Start()
     {
-        cameraObject = GameObject.FindWithTag("MainCamera");
-
+        //cameraObject = GameObject.FindWithTag("MainCamera");
+        refCamera = cameraObject.GetComponent<PlayerFollowCamera>();
         // CapsuleColliderコンポーネントを取得する（カプセル型コリジョン）
         col = GetComponent<CapsuleCollider>();
         rb = GetComponent<Rigidbody>();
@@ -71,9 +98,25 @@ public class Player : MonoBehaviour
 
         // Animatorコンポーネントを取得する
         anim = GetComponent<Animator>();
-
+        p_Status = GetComponent<PlayerStatusComponent>();
         //idleState = Animator.StringToHash("Base Layer.Idle");
         //attackspState = Animator.StringToHash("Attack All.Attack SP");
+
+        WheelTrigger = false;
+
+        idleState = Animator.StringToHash("Nomal Layer.Idle");
+        runState = Animator.StringToHash("Nomal Layer.Run");
+        runstopState = Animator.StringToHash("Nomal Layer.Run to stop");
+        rollState = Animator.StringToHash("Attack Layer.Roll");
+        attackState = Animator.StringToHash("Attack Layer.Attack");
+        attacksoftState = Animator.StringToHash("Attack Layer.Attack soft");
+        attackhardState = Animator.StringToHash("Attack Layer.Attack hard");
+        attackspState = Animator.StringToHash("Attack Layer.Attack SP");
+        HitState = Animator.StringToHash("Hit Layer.Hit");
+        Hit1State = Animator.StringToHash("Hit Layer.Hit1");
+        Hit2State = Animator.StringToHash("Hit Layer.Hit2");
+        Hit3State = Animator.StringToHash("Hit Layer.Hit3");
+        StandUpState = Animator.StringToHash("Hit Layer.StandUp");
     }
 
 void FixedUpdate()
@@ -84,6 +127,39 @@ void FixedUpdate()
         speed = moveSpeed;
         v = 0;
 
+        //マウスホイール取得
+        if (WheelTrigger)
+        {
+            TimeCount += Time.deltaTime;
+        }
+        else
+        {
+            float Wheel = Input.GetAxis("Mouse ScrollWheel");
+            SetWheelMove(Wheel);
+        }
+
+        if (WheelTime < TimeCount)
+        {
+            WheelTrigger = false;
+            TimeCount = 0.0f;
+        }
+
+        KeyAction();
+
+        if (IsAttack()||IsHit())
+        {
+            speed = 0.0f;
+        }else if (IsRoll())
+        {
+            speed = RollSpeed;
+        }
+
+        SetAnimation(v);
+        
+    }
+
+    void KeyAction()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             velocity.z += 1;
@@ -104,21 +180,26 @@ void FixedUpdate()
             velocity.x += 1;
             v = 1;
         }
-        if (Input.GetMouseButtonDown(1))
+        if (!anim.GetBool("Attack hard") && !anim.GetBool("Attack soft") && !anim.GetBool("Attack sp"))
         {
-            anim.SetBool("Attack", true);
-            anim.SetBool("Attack hard", true);
+            if (Input.GetMouseButtonDown(1) && p_Status.ExpNow() > 0)
+            {
+                anim.SetBool("Attack", true);
+                anim.SetBool("Attack hard", true);
+                p_Status.ExpDown();
+
+            }
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
+            {
+                anim.SetBool("Attack", true);
+                anim.SetBool("Attack soft", true);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("a");
-            anim.SetBool("Attack", true);
-            anim.SetBool("Attack soft", true);
-        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            anim.SetBool("Attack", true);
-            anim.SetBool("Attack sp", true);
+            //選択されているエキスアクションを実行
+            SetExAction(ExAction);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -128,19 +209,7 @@ void FixedUpdate()
         {
             anim.SetBool("HitChack", true);
         }
-
-        if (IsAttack()||IsHit())
-        {
-            speed = 0.0f;
-        }else if (IsRoll())
-        {
-            speed = RollSpeed;
-        }
-
-        SetAnimation(v);
-        
     }
-
     void SetAnimation(float v)
     {
 
@@ -181,7 +250,7 @@ void FixedUpdate()
         //}
 
         // 現在のベースレイヤーがrollStateの時
-        else if (currentBaseState.nameHash == rollState)
+         if (currentBaseState.nameHash == rollState)
         {
             // ステートがトランジション中でない場合
             if (!anim.IsInTransition(0))
@@ -219,29 +288,33 @@ void FixedUpdate()
             {
                 resetCollider();
             }
+            if (!anim.GetBool("Attack"))
+            {
+                anim.SetBool("Attack soft", false);
+                anim.SetBool("Attack hard", false);
+                anim.SetBool("Attack sp", false);
+            }
             //// スペースキーを入力したらRest状態になる
             //if (Input.GetButtonDown("Jump"))
             //{
             //    //anim.SetBool ("Rest", true);
             //}
         }
-        else if (currentBaseState.nameHash == Hit1State || currentBaseState.nameHash == Hit2State || currentBaseState.nameHash == Hit3State) 
+        else if (currentBaseState.nameHash == Hit1State || currentBaseState.nameHash == Hit2State || currentBaseState.nameHash == Hit3State)
         {
-            Debug.Log("a");
             if (anim.GetBool("HitChack"))
             {
                 anim.SetBool("HitChack", false);
             }
+        } else if (currentBaseState.nameHash == attackState || currentBaseState.nameHash == attacksoftState || currentBaseState.nameHash == attackhardState || currentBaseState.nameHash == attackspState) 
+        {
+            anim.SetBool("Attack", false);
         }
 
         if (anim.IsInTransition(0))
         {
             if (anim.GetBool("Attack"))
             {
-                anim.SetBool("Attack", false);
-                anim.SetBool("Attack soft", false);
-                anim.SetBool("Attack hard", false);
-                anim.SetBool("Attack sp", false);
             }
             if (anim.GetBool("Roll"))
             {
@@ -250,6 +323,87 @@ void FixedUpdate()
         }
     }
 
+    //エキスアクション(アクション名)
+    void SetExAction(int actionNumber)
+    {
+        int exAction = actionNumber % 3;
+
+        if (exAction < 0)
+        {
+            exAction *= -1;
+        }
+
+        //エキスアクションの選択
+        switch (exAction)
+        {
+            //回復
+            case (int)ExActionName.Heal:
+                Debug.Log("Heal");
+                SEManager.Instance.Play("Heal");
+                p_Status.HPUp(1);
+                break;
+
+            //必殺技
+            case (int)ExActionName.Spattack:
+                if (!anim.GetBool("Attack hard") && !anim.GetBool("Attack soft") && !anim.GetBool("Attack sp"))
+                    if (p_Status.MaxExp() == p_Status.ExpNow())
+                    {
+                        anim.SetBool("Attack", true);
+                        anim.SetBool("Attack sp", true);
+                        p_Status.ExpZero();
+
+                    }
+                break;
+
+            default:
+                break;
+        }
+    }
+    //マウスホイール操作
+    int SetWheelMove(float mouseWheel)
+    {
+        ExAction += (int)(mouseWheel);
+
+        if (mouseWheel > 0)
+        {
+            ExAction++;
+            WheelTrigger = true;
+        }
+        else if (mouseWheel < 0)
+        {
+            ExAction--;
+            WheelTrigger = true;
+        }
+        else if (mouseWheel == 0)
+        {
+
+        }
+
+        ExButtonObj[0].GetComponent<Image>().color = Color.white;
+        ExButtonObj[1].GetComponent<Image>().color = Color.white;
+        ExButtonObj[2].GetComponent<Image>().color = Color.white;
+
+        int aaa = ExAction % 3;
+        if (aaa < 0)
+        {
+            aaa *= -1;
+        }
+        ExButtonObj[aaa].GetComponent<Image>().color = Color.red;
+
+        //switch (aaa)
+        //{
+        //    case (int)ExActionName.Heal:
+        //        ExButtonObj[aaa].GetComponent<Image>().color = Color.red;
+        //        break;
+        //    case (int)ExActionName.Spattack:
+        //        ExButtonObj[aaa].GetComponent<Image>().color = Color.red;
+        //        break;
+        //    case 2:
+        //        ExButtonObj[aaa].GetComponent<Image>().color = Color.red;
+        //        break;
+        //}
+        return 0;
+    }
     public bool IsHit()
     {
         if (currentBaseState.nameHash == Hit1State || currentBaseState.nameHash == Hit2State || currentBaseState.nameHash == Hit3State)
@@ -309,11 +463,17 @@ void FixedUpdate()
     //void OnCollisionEnter(Collider col)
     void OnTriggerEnter(Collider col)
     {
-        if (LayerMask.LayerToName(col.gameObject.layer) == "Enemy")
+        if (LayerMask.LayerToName(col.gameObject.layer) == EnemyLayerName&&Hittriger)
         {
-            Debug.Log("aa");
+            Debug.Log("敵と接触");
             v = 0.0f;
             HitEnemyAttack();
         }
+    }
+
+    //現在選択されているエキスアクション取得
+    public int GetExAction()
+    {
+        return ExAction;
     }
 }

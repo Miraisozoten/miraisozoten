@@ -283,6 +283,11 @@ public class PlayerStatusComponent : StatusComponent
         return false;
     }
 
+    //HP上昇(上昇量 float)
+    public void HPUp(float damage)
+    {
+        HP_Icon += damage;
+    }
     //HP減少(減少量 float)
     public void HPDown(float damage)
     {
@@ -299,10 +304,27 @@ public class PlayerStatusComponent : StatusComponent
     {
         ExtractPoint_Icon -= 1;
     }
+    //エキス減少(1メモリ)
+    public void ExpZero()
+    {
+        ExtractPoint_Icon = 0;
+    }
     //現在のエキス量
     public int ExpNow()
     {
+        Debug.Log(ExtractPoint_Icon + "現在エキス量");
         return ExtractPoint_Icon;
+    }
+    //最大エキス量
+    public int MaxExp()
+    {
+        Debug.Log(Ex_Max_Icon + "最大エキス量");
+        return Ex_Max_Icon;
+    }
+
+    public bool GetWeaponCollider()
+    {
+        return WeaponColider.enabled;
     }
 }
 

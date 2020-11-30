@@ -5,14 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour
 {
+
+    [SerializeField, Header("GameClearComponent")]
+    public GameClearComponent GameClearSprite;
+    [SerializeField, Header("GameOverComponent")]
+    public GameOverComponent GameOverSprite;
+
     [SerializeField, Header("リセットするとき")]
     public bool ResetFlag;
     [SerializeField, Header("クリアしたとき")]
     public bool ClearFlag;
+    [SerializeField, Header("ゲームオーバー")]
+    public bool OverFlag;
     void Start()
     {
         ResetFlag = false;
         ClearFlag = false;
+        OverFlag = false;
     }
 
     void FixedUpdate()
@@ -21,9 +30,17 @@ public class SceneManage : MonoBehaviour
         {
             Reset();
         }
+        if (ClearFlag)
+        {
+            GameClearSprite.GameclrImageOn();
+        }
+        if (OverFlag)
+        {
+            GameOverSprite.GameOverImageOn();
+        }
     }
 
-   public void Stage1()
+    public void Stage1()
     {
         SceneManager.LoadScene("Stage1");
     }
@@ -100,6 +117,9 @@ public class SceneManage : MonoBehaviour
     {
         ResetFlag = false;
         ClearFlag = false;
+        OverFlag = false;
+        GameClearSprite.GameclrImageOff();
+        GameOverSprite.GameOverImageOff();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

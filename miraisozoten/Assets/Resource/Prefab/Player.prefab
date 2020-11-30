@@ -241,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457830625607585084}
   m_LocalRotation: {x: 0.04357249, y: 0.13585238, z: 0.0055292663, w: 0.98975503}
-  m_LocalPosition: {x: 0.00020646631, y: 0.98590773, z: 0.0007639789}
+  m_LocalPosition: {x: 0.00020646631, y: 0, z: 0.0007639789}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4087625034547227957}
@@ -309,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729145276627119719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.86, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8814078885491141792}
@@ -379,12 +379,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ab145162ef1524aa2614860a39594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
-  moveSpeed: 5
-  applySpeed: 0.2
-  refCamera: {fileID: 0}
+  moveSpeed: 10
   cameraObject: {fileID: 0}
-  anim: {fileID: 0}
+  EnemyLayerName: Enemy
+  Hittriger: 0
+  ExAction: 0
+  ExButtonObj:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  WheelTime: 0.5
+  WheelTrigger: 0
+  col: {fileID: 0}
   useCurves: 1
   useCurvesHeight: 0.5
   Rollweight: 1
@@ -2494,7 +2500,7 @@ PrefabInstance:
     - target: {fileID: 512908819341400378, guid: b13407c6a2967e34ab26558b810f46ac,
         type: 3}
       propertyPath: m_Name
-      value: 'Bip001 '
+      value: Weapon_Sword
       objectReference: {fileID: 0}
     - target: {fileID: 512908819341400379, guid: b13407c6a2967e34ab26558b810f46ac,
         type: 3}

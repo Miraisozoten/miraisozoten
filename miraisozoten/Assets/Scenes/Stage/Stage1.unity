@@ -7428,6 +7428,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1409355014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 738467905, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077291168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1426860994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7667,6 +7673,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4844902911259396, guid: 01bdef6597b249b44a9530ab656246fc,
     type: 3}
   m_PrefabInstance: {fileID: 1450347136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1455449546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1225568677, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077291168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1491749563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 556362213, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2077291168}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1501218532
 PrefabInstance:
@@ -9609,6 +9627,21 @@ PrefabInstance:
       propertyPath: cameraObject
       value: 
       objectReference: {fileID: 1148318313}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExButtonObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 1491749563}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExButtonObj.Array.data[1]
+      value: 
+      objectReference: {fileID: 1409355014}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExButtonObj.Array.data[2]
+      value: 
+      objectReference: {fileID: 1455449546}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10830,8 +10863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcabfa6c1f5fb04e8897b19ed63f990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameClearSprite: {fileID: 0}
+  GameOverSprite: {fileID: 0}
   ResetFlag: 0
   ClearFlag: 0
+  OverFlag: 0
 --- !u!1 &2073377807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1978445070297066, guid: 4983f395b2610de4e9f688a87bbd9af9,
@@ -11347,6 +11383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392321988949897599, guid: 21152d00cd62fc144b2e889b6bdc3f16,
+        type: 3}
+      propertyPath: DeleteTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21152d00cd62fc144b2e889b6bdc3f16, type: 3}
