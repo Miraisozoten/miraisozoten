@@ -120,9 +120,6 @@ public class Player : MonoBehaviour
 
 void FixedUpdate()
     {
-        Debug.Log(idleState);
-        Debug.Log(runState);
-        Debug.Log(currentBaseState.nameHash);
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
 
@@ -145,6 +142,7 @@ void FixedUpdate()
             WheelTrigger = false;
             TimeCount = 0.0f;
         }
+
         KeyAction();
 
         if (IsAttack()||IsHit())
@@ -289,7 +287,6 @@ void FixedUpdate()
             {
                 resetCollider();
             }
-            Debug.Log("通常");
             if (!anim.GetBool("Attack"))
             {
                 anim.SetBool("Attack soft", false);
@@ -304,7 +301,6 @@ void FixedUpdate()
         }
         else if (currentBaseState.nameHash == Hit1State || currentBaseState.nameHash == Hit2State || currentBaseState.nameHash == Hit3State)
         {
-            Debug.Log("a");
             if (anim.GetBool("HitChack"))
             {
                 anim.SetBool("HitChack", false);
@@ -470,5 +466,11 @@ void FixedUpdate()
             v = 0.0f;
             HitEnemyAttack();
         }
+    }
+
+    //現在選択されているエキスアクション取得
+    public int GetExAction()
+    {
+        return ExAction;
     }
 }

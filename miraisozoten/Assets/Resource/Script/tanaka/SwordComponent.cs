@@ -39,7 +39,9 @@ public class SwordComponent : MonoBehaviour
             //        return;
             //    }
             //}
-            Destroy(other.gameObject);
+
+            other.GetComponent<EnemyEffect>().EffectOn();
+            //Destroy(other.gameObject);
             P_Status.ExpUp();
             //SwordHitList.Add(other.gameObject);
         }
