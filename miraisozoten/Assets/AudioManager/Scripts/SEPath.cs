@@ -7,8 +7,6 @@ public static class SEPath{
 
 	public const string BUBBLE_BIRTH     = "SE/Bubble_Birth";
 	public const string BUBBLE_DEATH     = "SE/Bubble_Death";
-	public const string ENEMY_HIT        = "SE/EnemyHit";
-	public const string HEAL             = "SE/Heal";
 	public const string JINGLE10         = "SE/Jingle/jingle10";
 	public const string SE_BUBBLE_BIG    = "SE/タイトル演出/泡ふくらむ音/SE_BubbleBig";
 	public const string SE_BUBBLE_RISE   = "SE/タイトル演出/泡の浮上音/音人/SE_BubbleRise";
