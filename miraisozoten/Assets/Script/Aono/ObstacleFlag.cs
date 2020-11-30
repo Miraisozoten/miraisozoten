@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseFlag : MonoBehaviour
+public class ObstacleFlag : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     [SerializeField]
     Move script;
 
     void OnTriggerStay(Collider col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "Obstacle")
         {
-            script.chaseFlag = true;
+            script.AvoidanceFlag = true;
+            script.chaseFlag = false;
             //Debug.Log("追跡中");
         }
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "Obstacle")
         {
-           script.chaseFlag = false;
-           //Debug.Log("見失った");
+            script.AvoidanceFlag = false;
+            //Debug.Log("見失った");
         }
     }
 }
