@@ -283,6 +283,11 @@ public class PlayerStatusComponent : StatusComponent
         return false;
     }
 
+    //HP上昇(上昇量 float)
+    public void HPUp(float damage)
+    {
+        HP_Icon += damage;
+    }
     //HP減少(減少量 float)
     public void HPDown(float damage)
     {

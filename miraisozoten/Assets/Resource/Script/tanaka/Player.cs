@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using KanKikuchi.AudioManager;
 
 // プレイヤー
 public class Player : MonoBehaviour
@@ -338,6 +339,8 @@ void FixedUpdate()
             //回復
             case (int)ExActionName.Heal:
                 Debug.Log("Heal");
+                SEManager.Instance.Play("Heal");
+                p_Status.HPUp(1);
                 break;
 
             //必殺技
