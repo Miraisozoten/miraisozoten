@@ -8,11 +8,18 @@ public class Move : MonoBehaviour
     //[SerializeField]
     //GameObject gameObject;
 
-    public GameObject text_1;
+    //public GameObject text_1;
 
     public Transform PlayerTransform;
 
     public bool RayFlag = false;
+
+    public bool chaseFlag = false;
+
+    public bool LookAtFlag = false;
+
+    [System.NonSerialized]
+    public bool AvoidanceMove = false;
 
     //public bool MoveFlag = false;
 
@@ -21,8 +28,8 @@ public class Move : MonoBehaviour
     [SerializeField, Header("HP")]
     public int HP;
 
-    [SerializeField, Header("追跡距離:最大")]
-    public float MoveDistance;
+    //[SerializeField, Header("追跡距離:最大")]
+    //public float MoveDistance;
 
     [SerializeField, Header("移動速度:X")]
     float MoveSpeedX;
@@ -33,9 +40,11 @@ public class Move : MonoBehaviour
     [SerializeField, Header("移動速度:Z")]
     float MoveSpeedZ;
 
-    public bool chaseFlag = false;
+    public float Distance;
 
-    // Start is called before the first frame update
+    [System.NonSerialized]
+    public float AvoidanceAngle;
+
     void Start()
     {
         //PlayerTransform.position = gameObject.transform.position;
@@ -43,15 +52,8 @@ public class Move : MonoBehaviour
          
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
-
     void FixedUpdate()
     {
-
         if (chaseFlag == true)
         {
             Moveing();
@@ -61,12 +63,6 @@ public class Move : MonoBehaviour
         {
             AvoidanceObstacle();
         }
-
-        Text HP_Text = text_1.GetComponent<Text>();
-
-        HP_Text.text = "HP:"+ HP;
-
-        //Debug.Log(PlayerTransform.transform.position.x);
     }
 
     void Moveing()
@@ -74,40 +70,49 @@ public class Move : MonoBehaviour
         // transformを取得
         Transform myTransform = this.transform;
 
-        this.transform.LookAt(PlayerTransform.transform);
+        if (LookAtFlag == true)
+        {
+            this.transform.LookAt(PlayerTransform.transform);
+        }
 
-        if (PlayerTransform.transform.position.x >= myTransform.transform.position.x)
-            {
-                //Debug.Log("A");
+        if (PlayerTransform.transform.position.x >= myTransform.transform.position.x + Distance|| PlayerTransform.transform.position.x >= myTransform.transform.position.x - Distance)
+         {
                 myTransform.Translate(MoveSpeedX, MoveSpeedY, 0.0f, Space.World);
-            }
+         }
 
-            else
-            {
-                //Debug.Log("B");
+        if(PlayerTransform.transform.position.x <= myTransform.transform.position.x + Distance || PlayerTransform.transform.position.x <= myTransform.transform.position.x - Distance)
+        {
                 myTransform.Translate(-MoveSpeedX, MoveSpeedY, 0.0f, Space.World);
-            }
+         }
 
-            if (PlayerTransform.transform.position.z >= myTransform.transform.position.z)
-            {
-                //Debug.Log("C");
+        if (PlayerTransform.transform.position.z >= myTransform.transform.position.z + Distance || PlayerTransform.transform.position.z >= myTransform.transform.position.z - Distance)
+        {
                 myTransform.Translate(0.0f, MoveSpeedY, MoveSpeedZ, Space.World);
-            }
+         }
 
-            else
-            {
-                //Debug.Log("D");
+        if (PlayerTransform.transform.position.z <= myTransform.transform.position.z + Distance || PlayerTransform.transform.position.z <= myTransform.transform.position.z - Distance)
+        {
                 myTransform.Translate(0.0f, MoveSpeedY, -MoveSpeedZ, Space.World);
-            }
+         }
             
     }
 
     void AvoidanceObstacle()
     {
+        Debug.Log(AvoidanceAngle+" ");
+
         Transform myTransform = this.transform;
 
-        myTransform.Rotate(0.0f, 0.0f, 0.0f);
+        Vector3 localangle = myTransform.localEulerAngles;
 
-        myTransform.Translate(0.0f, 0.0f, 0.0f,Space.World);
+        //myTransform.Rotate(0.0f, AvoidanceAngle, 0.0f);
+        if (AvoidanceMove == true)
+        {
+            localangle.y = AvoidanceAngle;
+
+            myTransform.localEulerAngles = localangle;
+
+            myTransform.Translate(0.0f, 0.0f, MoveSpeedZ * 2);
+        }
     }
 }

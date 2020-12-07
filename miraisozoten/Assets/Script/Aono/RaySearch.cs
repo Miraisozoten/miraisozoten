@@ -17,6 +17,8 @@ public class RaySearch : MonoBehaviour
 
     public bool ReverseFlag;
 
+    public bool TestFlag = false;
+
     //public bool RayFlag = false;
 
     Vector3 fwd;
@@ -57,7 +59,7 @@ public class RaySearch : MonoBehaviour
 
                 if (Physics.Raycast(transform.position, fwd, RayDistance))
                 {
-                    //print("There is something in front of the object!");
+                    print("Ray Atack!");
 
                     RayOrigin = localAngle.y;
                 }
@@ -66,10 +68,18 @@ public class RaySearch : MonoBehaviour
                 {
                     print(localAngle.y + "m");
 
+                    //script.AvoidanceAngle = 100;
+
                     if (ReverseFlag == true)
                     {
+
                         if (RayOrigin >= localAngle.y + RayMargin)
                         {
+
+                            script.AvoidanceAngle = localAngle.y;
+
+                            script.AvoidanceMove = true;
+
                             script.RayFlag = false;
                         }
                     }
@@ -78,6 +88,10 @@ public class RaySearch : MonoBehaviour
                     {
                         if (RayOrigin+RayMargin <=localAngle.y)
                         {
+                            script.AvoidanceAngle = localAngle.y;
+
+                            script.AvoidanceMove = true;
+
                             script.RayFlag = false;
                         }
 
@@ -86,7 +100,10 @@ public class RaySearch : MonoBehaviour
                     //script.RayFlag = false;
                 }
 
-                Debug.DrawRay(transform.position, fwd * RayDistance, Color.red, 100.0f);
+                if (TestFlag == true)
+                {
+                    Debug.DrawRay(transform.position, fwd * RayDistance, Color.red, 100.0f);
+                }
 
             }
         }
