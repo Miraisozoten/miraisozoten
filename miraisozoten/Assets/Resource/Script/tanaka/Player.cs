@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     {
         Heal = 0,
         Spattack,
-
+        Cleairvoyance,
     };
 
     //[SerializeField]
@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     public bool Hittriger;
     [SerializeField, Header("現在のエキスアクション")]
     public int ExAction;
+    [SerializeField, Header("ExActionMove入れる")]
+    public ExActionMove ExActionScript;
     [SerializeField, Header("エキスボタン入れる")]
     public List<GameObject> ExButtonObj;
 
@@ -119,7 +121,23 @@ public class Player : MonoBehaviour
         StandUpState = Animator.StringToHash("Hit Layer.StandUp");
     }
 
-void FixedUpdate()
+
+    void LateUpdate()
+    {
+        //ボタンの色変え
+        if (ExActionScript.GetTransition())
+        {
+            ExButtonObj[ExAction].GetComponent<Image>().color = Color.red;
+        }
+        else
+        {
+            ExButtonObj[0].GetComponent<Image>().color = Color.white;
+            ExButtonObj[1].GetComponent<Image>().color = Color.white;
+            ExButtonObj[2].GetComponent<Image>().color = Color.white;
+        }
+    }
+
+    void FixedUpdate()
     {
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
@@ -355,6 +373,10 @@ void FixedUpdate()
                     }
                 break;
 
+            case (int)ExActionName.Cleairvoyance:
+
+                break;
+
             default:
                 break;
         }
@@ -364,19 +386,29 @@ void FixedUpdate()
     {
         ExAction += (int)(mouseWheel);
 
-        if (mouseWheel > 0)
+        if (mouseWheel < 0)
         {
             ExAction++;
             WheelTrigger = true;
+            ExActionScript.WheelUp();
+
         }
-        else if (mouseWheel < 0)
+        else if (mouseWheel > 0)
         {
             ExAction--;
             WheelTrigger = true;
+            ExActionScript.WheelDown();
         }
         else if (mouseWheel == 0)
         {
 
+        }
+        if (ExAction > 2)
+        {
+            ExAction = 0;
+        }else if (ExAction < 0)
+        {
+            ExAction = 2;
         }
 
         ExButtonObj[0].GetComponent<Image>().color = Color.white;
@@ -388,8 +420,20 @@ void FixedUpdate()
         {
             aaa *= -1;
         }
-        ExButtonObj[aaa].GetComponent<Image>().color = Color.red;
 
+
+        switch (aaa)
+        {
+            case 0:
+                ExActionScript.IsHeal();
+                break;
+            case 1:
+                ExActionScript.IsSpecial();
+                break;
+            case 2:
+                ExActionScript.IsCleirvoyance();
+                break;
+        }
         //switch (aaa)
         //{
         //    case (int)ExActionName.Heal:
