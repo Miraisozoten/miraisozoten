@@ -5180,12 +5180,12 @@ PrefabInstance:
     - target: {fileID: 7596257646759158513, guid: 7a554c7b36e6f6b4c9f610387933bbc1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163.5
+      value: 12.8
       objectReference: {fileID: 0}
     - target: {fileID: 7596257646759158513, guid: 7a554c7b36e6f6b4c9f610387933bbc1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.4
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7596257646759158513, guid: 7a554c7b36e6f6b4c9f610387933bbc1,
         type: 3}
@@ -11020,9 +11020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 410971922}
-  EnemyNum: 3
+  EnemyNum: 25
   OriginObject2: {fileID: 1003886667}
-  EnemyNum2: 3
+  EnemyNum2: 25
   OriginObject3: {fileID: 919132147634703084}
   EnemyNum3: 0
   OriginObject4: {fileID: 919132147634703084}
