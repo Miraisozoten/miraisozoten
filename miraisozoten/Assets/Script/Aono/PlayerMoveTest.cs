@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMoveTest : MonoBehaviour
 {
+    public float Speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,22 +17,22 @@ public class PlayerMoveTest : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.1f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Speed);
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Speed);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - Speed, transform.position.y, transform.position.z);
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + Speed, transform.position.y, transform.position.z);
         }
     }
 

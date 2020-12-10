@@ -384,6 +384,7 @@ MonoBehaviour:
   EnemyLayerName: Enemy
   Hittriger: 0
   ExAction: 0
+  ExActionScript: {fileID: 0}
   ExButtonObj:
   - {fileID: 0}
   - {fileID: 0}
