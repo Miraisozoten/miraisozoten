@@ -4758,7 +4758,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -11122,12 +11122,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 410971922}
-  EnemyNum: 5
+  EnemyNum: 100
   RespawnX_1: 0
   RespawnY_1: 2
   RespawnZ_1: 5
   OriginObject2: {fileID: 1003886667}
-  EnemyNum2: 5
+  EnemyNum2: 100
   RespawnX_2: 0
   RespawnY_2: 2
   RespawnZ_2: 10
