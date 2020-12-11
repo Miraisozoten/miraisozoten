@@ -1220,6 +1220,11 @@ PrefabInstance:
       propertyPath: ExButtonObj.Array.data[2]
       value: 
       objectReference: {fileID: 1514498219}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExActionScript
+      value: 
+      objectReference: {fileID: 578767858}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2558,6 +2563,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 551015935}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &578767858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6785552442371267354, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514498218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a9eb259f73f9145997c033aef13cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &586416607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9526,7 +9543,7 @@ GameObject:
   - component: {fileID: 1796295470}
   - component: {fileID: 1796295469}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Stage3_Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
