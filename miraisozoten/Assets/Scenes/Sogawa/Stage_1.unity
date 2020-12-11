@@ -960,6 +960,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 295721039}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &360950786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2101804377, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 402669311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &382536270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1330,7 +1336,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 402669311}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 360950786}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cee3d62e813bc44d89a2996f90dc29f, type: 3}
@@ -1342,7 +1348,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 402669311}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1944409350}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05fadeecbcc5d964c937c27c9e104e00, type: 3}
@@ -2078,8 +2084,8 @@ Terrain:
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
+  m_DetailObjectDensity: 0.48
+  m_HeightmapPixelError: 50
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
@@ -2980,7 +2986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821708848}
   m_LocalRotation: {x: -0.3447983, y: 0.62917024, z: -0.61188745, w: -0.33294564}
-  m_LocalPosition: {x: -62, y: -34, z: -202}
+  m_LocalPosition: {x: 191.7, y: 147.7, z: 273.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5742,8 +5748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObj: {fileID: 1963078669239703515}
-  GameoverObj: {fileID: 0}
-  GameclearObj: {fileID: 0}
+  GameoverObj: {fileID: 1944409350}
+  GameclearObj: {fileID: 360950786}
   SceneManager: {fileID: 1415503098}
   enemycount: 0
 --- !u!4 &1576717655
@@ -6069,7 +6075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bceedfa1abc7224fb45cbfa70dcebc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 1397189139}
+  script: {fileID: 0}
 --- !u!135 &1660632364
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7186,6 +7192,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1940684099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1944409350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 241941557, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 402669311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1947510176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7261,6 +7273,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1947510176}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003974300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6785552442371267354, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 402669311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a9eb259f73f9145997c033aef13cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2044330495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7806,6 +7830,11 @@ PrefabInstance:
       propertyPath: ExButtonObj.Array.data[2]
       value: 
       objectReference: {fileID: 715480990}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExActionScript
+      value: 
+      objectReference: {fileID: 2003974300}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x
