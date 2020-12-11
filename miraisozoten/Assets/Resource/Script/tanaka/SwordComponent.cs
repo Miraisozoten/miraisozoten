@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class SwordComponent : MonoBehaviour
 {
@@ -39,7 +40,9 @@ public class SwordComponent : MonoBehaviour
             //        return;
             //    }
             //}
-            Destroy(other.gameObject);
+            SEManager.Instance.Play("EnemyHit");
+            other.GetComponent<EnemyEffect>().EffectOn();
+            //Destroy(other.gameObject);
             P_Status.ExpUp();
             //SwordHitList.Add(other.gameObject);
         }

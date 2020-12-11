@@ -384,6 +384,13 @@ MonoBehaviour:
   EnemyLayerName: Enemy
   Hittriger: 0
   ExAction: 0
+  ExActionScript: {fileID: 0}
+  ExButtonObj:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  WheelTime: 0.5
+  WheelTrigger: 0
   col: {fileID: 0}
   useCurves: 1
   useCurvesHeight: 0.5
