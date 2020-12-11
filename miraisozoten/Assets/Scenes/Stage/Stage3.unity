@@ -1412,6 +1412,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82a0024cf3346b4695544dd461fb02b, type: 3}
+--- !u!114 &233516045 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6785552442371267354, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 255079665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a9eb259f73f9145997c033aef13cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &233913901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7949,7 +7961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1418381762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9404,15 +9416,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 1117381022}
   EnemyNum: 25
+  RespawnX_1: 0
+  RespawnY_1: 0
+  RespawnZ_1: 0
   OriginObject2: {fileID: 1117381022}
   EnemyNum2: 0
+  RespawnX_2: 0
+  RespawnY_2: 0
+  RespawnZ_2: 0
   OriginObject3: {fileID: 1300575563}
   EnemyNum3: 25
+  RespawnX_3: 0
+  RespawnY_3: 0
+  RespawnZ_3: 0
   OriginObject4: {fileID: 1300575563}
   EnemyNum4: 0
-  RespawnX: 170
-  RespawnY: 0.6
-  RespawnZ: 490
+  RespawnX_4: 0
+  RespawnY_4: 0
+  RespawnZ_4: 0
   RandamRange_Tops: 20
   RandamRange_Bottom: -20
 --- !u!114 &1738147919
@@ -9429,15 +9450,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 465102212}
   EnemyNum: 25
+  RespawnX_1: 0
+  RespawnY_1: 0
+  RespawnZ_1: 0
   OriginObject2: {fileID: 250358460}
   EnemyNum2: 25
+  RespawnX_2: 0
+  RespawnY_2: 0
+  RespawnZ_2: 0
   OriginObject3: {fileID: 465102212}
   EnemyNum3: 0
+  RespawnX_3: 0
+  RespawnY_3: 0
+  RespawnZ_3: 0
   OriginObject4: {fileID: 250358460}
   EnemyNum4: 0
-  RespawnX: 120
-  RespawnY: 0
-  RespawnZ: 435
+  RespawnX_4: 0
+  RespawnY_4: 0
+  RespawnZ_4: 0
   RandamRange_Tops: 10
   RandamRange_Bottom: -10
 --- !u!4 &1738147920
@@ -9806,6 +9836,11 @@ PrefabInstance:
       propertyPath: ExButtonObj.Array.data[2]
       value: 
       objectReference: {fileID: 1767335087}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExActionScript
+      value: 
+      objectReference: {fileID: 233516045}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x

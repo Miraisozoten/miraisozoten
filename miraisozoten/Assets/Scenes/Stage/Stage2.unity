@@ -7624,6 +7624,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01bdef6597b249b44a9530ab656246fc, type: 3}
+--- !u!114 &990888809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6785552442371267354, guid: a5dd5651c0a4a1242a3a388994bb881f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1253671328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a9eb259f73f9145997c033aef13cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &991901487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4109027472145070, guid: 4dcb45769932d8b449fc6523626179be,
@@ -14251,6 +14263,11 @@ PrefabInstance:
       propertyPath: ExButtonObj.Array.data[2]
       value: 
       objectReference: {fileID: 698609496}
+    - target: {fileID: 1963078669103211301, guid: 42b486b521203074d97305487e63e845,
+        type: 3}
+      propertyPath: ExActionScript
+      value: 
+      objectReference: {fileID: 990888809}
     - target: {fileID: 2068551748902401245, guid: 42b486b521203074d97305487e63e845,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15129,15 +15146,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginObject: {fileID: 0}
   EnemyNum: 25
+  RespawnX_1: 0
+  RespawnY_1: 0
+  RespawnZ_1: 0
   OriginObject2: {fileID: 0}
   EnemyNum2: 25
+  RespawnX_2: 0
+  RespawnY_2: 0
+  RespawnZ_2: 0
   OriginObject3: {fileID: 0}
   EnemyNum3: 0
+  RespawnX_3: 0
+  RespawnY_3: 0
+  RespawnZ_3: 0
   OriginObject4: {fileID: 0}
   EnemyNum4: 0
-  RespawnX: 40
-  RespawnY: 10
-  RespawnZ: 60
+  RespawnX_4: 0
+  RespawnY_4: 0
+  RespawnZ_4: 0
   RandamRange_Tops: 100
   RandamRange_Bottom: -100
 --- !u!4 &1900027637
