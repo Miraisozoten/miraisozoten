@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8059689e0efbf0941a59f235bd1e7de4
+guid: 2f6fee3903273554d94cc14f39114b21
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Melon_LeftAttack
+    second: Banana_JumpAttack
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Melon_LeftAttack
+      name: Banana_JumpAttack
       takeName: Take 001
       internalID: 0
       firstFrame: 1
-      lastFrame: 66
+      lastFrame: 41
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
