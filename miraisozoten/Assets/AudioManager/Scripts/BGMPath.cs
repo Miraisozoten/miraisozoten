@@ -7,9 +7,7 @@ public static class BGMPath{
 
 	public const string BATTLE27                     = "BGM/Battle/battle27";
 	public const string BGM_TITLE                    = "BGM/BGM_Title";
-	public const string FANTASY14                    = "BGM/fantasy14";
 	public const string GAME_MAOUDAMASHII_1_BATTLE01 = "BGM/game_maoudamashii_1_battle01";
-	public const string HEARTBEAT01                  = "BGM/heartbeat01";
 
 }
 

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8794680983683872746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8794680983683872532}
+  - component: {fileID: 8794680983683872533}
+  m_Layer: 0
+  m_Name: AttackTutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8794680983683872532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794680983683872746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1560, y: 780, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8794680983683872533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794680983683872746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36978a3d51b078941ab252837f4a8ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIPosition: {x: 0, y: 0, z: 0}
+  UIScale: {x: 0, y: 0, z: 0}
+  NextTutorial: 0
+  img: {fileID: 5148231009627824278, guid: aee389c59a882df499df24ea8c7aca74, type: 3}
+  img2: {fileID: 4446739948696983751, guid: 9d51ed17209d5114781cf1a90913e2fe, type: 3}
+  img3: {fileID: 5637625573198002946, guid: 56b9f19dd1fe82446a8fbf965d186990, type: 3}
+  img4: {fileID: 606511184330553291, guid: 6aa7d6382c6eb5d44b0c6900d4d9bb56, type: 3}
+  EssenseAttackKey: 101
+  MouseScrol: {x: 0, y: 0}

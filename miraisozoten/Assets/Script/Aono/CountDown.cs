@@ -94,7 +94,7 @@ public class CountDown : MonoBehaviour
 
             //timeText.text = ClearTime.ToString("f1") + "秒";
 
-            sprite = Resources.Load<Sprite>("ramen");
+            sprite = Resources.Load<Sprite>("Transparnent");
             image = image.GetComponent<Image>();
             image.sprite = sprite;
         }
@@ -112,7 +112,7 @@ public class CountDown : MonoBehaviour
         {
             Flag = true;
 
-            sprite = Resources.Load<Sprite>("ramen");
+            sprite = Resources.Load<Sprite>("Transparnent");
             image = image.GetComponent<Image>();
             image.sprite = sprite;
         }

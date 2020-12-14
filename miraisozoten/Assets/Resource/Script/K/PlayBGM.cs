@@ -14,7 +14,7 @@ public class PlayBGM : MonoBehaviour
     // Update is called once per frame
     void Update(){}
 
-    void Play()
+    protected void Play()
     {
         switch (playing)
         {
