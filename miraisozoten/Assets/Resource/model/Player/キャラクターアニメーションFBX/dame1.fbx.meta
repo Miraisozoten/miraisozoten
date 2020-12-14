@@ -1,0 +1,941 @@
+fileFormatVersion: 2
+guid: aa379e1aaed860445af1f5c058e1e1d2
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: dame1
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: <Root Transform>
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: dame1
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerMa:Player:Player
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body/PlayerMa:Player:chestplate
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body/PlayerMa:Player:polySurface119
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body/PlayerMa:Player:waist_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:kabuto
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:main
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:shoL
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:shoL3
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lfoot
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lknee_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lleg
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lleg_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rfoot
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rknee_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rleg
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rleg_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:Lhand
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:Rhand
+        weight: 1
+      - path: PlayerMa:Player_Contoroller
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:L_FootC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:L_KneeC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:HeadC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/pCylinder2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_IndexC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_IndexC1/PlayerMa:L_IndexC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_MiddleC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_MiddleC1/PlayerMa:L_MiddleC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_PinkyC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_PinkyC1/PlayerMa:L_PinkyC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_RingC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_RingC1/PlayerMa:L_RingC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_ThumbC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_ThumbC1/PlayerMa:L_ThumbC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/pCylinder1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_IndexC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_IndexC1/PlayerMa:R_IndexC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_MiddleC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_MiddleC1/PlayerMa:R_MiddleC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_PinkyC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_PinkyC1/PlayerMa:R_PinkyC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_RingC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_RingC1/PlayerMa:R_RingC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_ThumbC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_ThumbC1/PlayerMa:R_ThumbC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:R_FootC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:R_KneeC
+        weight: 1
+      - path: PlayerMa:Player_Joint
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:L_footSubJ1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:L_footSubJ1/PlayerMa:L_footSubJ2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:L_LegIK
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:R_footSubJ1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:R_footSubJ1/PlayerMa:R_footSubJ2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:R_LegIK
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg/PlayerMa:Lknee
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg/PlayerMa:Lknee/PlayerMa:Lfoot1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg/PlayerMa:Lknee/PlayerMa:Lfoot1/PlayerMa:Lfoot2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg/PlayerMa:Rknee
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg/PlayerMa:Rknee/PlayerMa:Rfoot1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg/PlayerMa:Rknee/PlayerMa:Rfoot1/PlayerMa:Rfoot2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:DummyA
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:Head
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lindex1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lindex1/PlayerMa:Lindex2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lindex1/PlayerMa:Lindex2/PlayerMa:Lindex3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lmiddle1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lmiddle1/PlayerMa:Lmiddle2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lmiddle1/PlayerMa:Lmiddle2/PlayerMa:Lmiddle3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lpinky1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lpinky1/PlayerMa:Lpinky2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lpinky1/PlayerMa:Lpinky2/PlayerMa:Lpinky3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lring1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lring1/PlayerMa:Lring2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lring1/PlayerMa:Lring2/PlayerMa:Lring3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lthumb1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lthumb1/PlayerMa:Lthumb2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lthumb1/PlayerMa:Lthumb2/PlayerMa:Lthumb3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rindex1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rindex1/PlayerMa:Rindex2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rindex1/PlayerMa:Rindex2/PlayerMa:Rindex3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rmiddle1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rmiddle1/PlayerMa:Rmiddle2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rmiddle1/PlayerMa:Rmiddle2/PlayerMa:Rmiddle3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rpinky1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rpinky1/PlayerMa:Rpinky2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rpinky1/PlayerMa:Rpinky2/PlayerMa:Rpinky3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rring1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rring1/PlayerMa:Rring2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rring1/PlayerMa:Rring2/PlayerMa:Rring3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rthumb1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rthumb1/PlayerMa:Rthumb2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rthumb1/PlayerMa:Rthumb2/PlayerMa:Rthumb3
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: dame1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane1
+      parentName: dame1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 50.05104, y: 50.05104, z: 50.05104}
+    - name: PlayerMa:Player_Joint
+      parentName: dame1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_LegIK
+      parentName: PlayerMa:Player_Joint
+      position: {x: -0.027645916, y: 0.0047331555, z: 0.045411266}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_footSubJ1
+      parentName: PlayerMa:Player_Joint
+      position: {x: -0.023216188, y: 0.00357322, z: 0.05264294}
+      rotation: {x: 0, y: -0.46148738, z: -0, w: 0.88714683}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_footSubJ2
+      parentName: PlayerMa:L_footSubJ1
+      position: {x: -0.008464323, y: 0.0011599353, z: -0.0005242826}
+      rotation: {x: 0, y: 0.6849008, z: -0, w: 0.7286363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_LegIK
+      parentName: PlayerMa:Player_Joint
+      position: {x: 0.02098155, y: 0.00473385, z: 0.008999854}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_footSubJ1
+      parentName: PlayerMa:Player_Joint
+      position: {x: 0.029217543, y: 0.0036115518, z: 0.011022915}
+      rotation: {x: 0, y: -0.09052358, z: -0, w: 0.9958943}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_footSubJ2
+      parentName: PlayerMa:R_footSubJ1
+      position: {x: -0.008469383, y: 0.0011222091, z: -0.000524596}
+      rotation: {x: 0, y: 0.6849008, z: -0, w: 0.7286363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Root
+      parentName: PlayerMa:Player_Joint
+      position: {x: 0, y: 0.10613133, z: -0.0000000018626451}
+      rotation: {x: -0, y: -0, z: 0.554486, w: 0.83219314}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1}
+    - name: PlayerMa:Spine
+      parentName: PlayerMa:Root
+      position: {x: 0.011414308, y: 0.004308355, z: 0.002067693}
+      rotation: {x: -0.18600166, y: 0.9825494, z: -0.0000000010826726, w: -0.0000000057191913}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000013}
+    - name: PlayerMa:Head
+      parentName: PlayerMa:Spine
+      position: {x: -0.019561239, y: 0.0004132656, z: -8.9092535e-13}
+      rotation: {x: 0.21946107, y: -0.97562134, z: -0.000000022715456, w: -0.0000000062480017}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: PlayerMa:LSholder
+      parentName: PlayerMa:Spine
+      position: {x: -0.0012616933, y: 0.012670507, z: 0.00019270237}
+      rotation: {x: 0.68249196, y: -0.73052794, z: 0.016544975, w: 0.016124856}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000004}
+    - name: PlayerMa:Lhizi
+      parentName: PlayerMa:LSholder
+      position: {x: -0.018689867, y: 0.0008760908, z: -0.0023202028}
+      rotation: {x: -0.00031806334, y: -0.0119787855, z: -0.020292664, w: 0.9997223}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: PlayerMa:LHand
+      parentName: PlayerMa:Lhizi
+      position: {x: -0.020971553, y: 0.00013107157, z: 0.0013330968}
+      rotation: {x: -0.00049622246, y: -0.158793, z: -0.003085128, w: 0.987307}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: PlayerMa:Lpinky1
+      parentName: PlayerMa:LHand
+      position: {x: -0.011492828, y: -0.0000000045008117, z: 0.0002758056}
+      rotation: {x: -0.0004347615, y: 0.07003854, z: -0.0039243572, w: 0.99753654}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: PlayerMa:Lpinky2
+      parentName: PlayerMa:Lpinky1
+      position: {x: -0.002310118, y: -0.0000000053914864, z: 0.000113216}
+      rotation: {x: -0.00000020160212, y: -0.013818386, z: -0.0000014821408, w: 0.9999045}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1}
+    - name: PlayerMa:Lpinky3
+      parentName: PlayerMa:Lpinky2
+      position: {x: -0.0014809744, y: -1.5120819e-18, z: 5.620504e-18}
+      rotation: {x: -0.68830526, y: 0.70300055, z: 0.12519917, w: -0.12787217}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+    - name: PlayerMa:Lring1
+      parentName: PlayerMa:LHand
+      position: {x: -0.009105381, y: 0.00052430516, z: 0.0016409074}
+      rotation: {x: 0.00000005972107, y: 0.09538854, z: -0.00000007636482, w: 0.9954401}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: PlayerMa:Lring2
+      parentName: PlayerMa:Lring1
+      position: {x: -0.002905743, y: 0.0000000012734607, z: -9.570636e-11}
+      rotation: {x: -0.000000040275363, y: -0.027616885, z: -0.000000013795072, w: 0.9996186}
+      scale: {x: 1.0000006, y: 1.0000001, z: 0.99999994}
+    - name: PlayerMa:Lring3
+      parentName: PlayerMa:Lring2
+      position: {x: -0.0026379195, y: 5.710715e-34, z: -4.857226e-19}
+      rotation: {x: 3.3881872e-10, y: -0.06786122, z: -0.00000005894204, w: 0.9976948}
+      scale: {x: 0.9999996, y: 0.9999997, z: 1}
+    - name: PlayerMa:Lmiddle1
+      parentName: PlayerMa:LHand
+      position: {x: -0.008857871, y: 0.00071241, z: 0.0031345296}
+      rotation: {x: 0.000000027765054, y: 0.1500513, z: -0.0000001482108, w: 0.9886782}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+    - name: PlayerMa:Lmiddle2
+      parentName: PlayerMa:Lmiddle1
+      position: {x: -0.003102093, y: 2.438493e-10, z: 6.717864e-11}
+      rotation: {x: 0.00000003186564, y: 0.017618774, z: 0.00000010782689, w: 0.9998448}
+      scale: {x: 1, y: 1.0000004, z: 0.9999998}
+    - name: PlayerMa:Lmiddle3
+      parentName: PlayerMa:Lmiddle2
+      position: {x: -0.0023471494, y: 5.07902e-34, z: 7.6327835e-18}
+      rotation: {x: -0.000000046914018, y: -0.16744731, z: -0.00000009855048, w: 0.98588103}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: PlayerMa:Lindex1
+      parentName: PlayerMa:LHand
+      position: {x: -0.008306324, y: 0.00018302696, z: 0.004542208}
+      rotation: {x: 0.00000006030312, y: 0.19865853, z: -0.00000007076049, w: 0.98006874}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000004}
+    - name: PlayerMa:Lindex2
+      parentName: PlayerMa:Lindex1
+      position: {x: -0.0027125136, y: 0.0000000015746084, z: -9.1512464e-11}
+      rotation: {x: -0.000000022020505, y: 0.029023677, z: -0.00000009378371, w: 0.9995788}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: PlayerMa:Lindex3
+      parentName: PlayerMa:Lindex2
+      position: {x: -0.001385775, y: 2.1512819e-34, z: 1.5265567e-18}
+      rotation: {x: 0.00000003163009, y: -0.22702007, z: 0.00000013798511, w: 0.9738901}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: PlayerMa:Lthumb1
+      parentName: PlayerMa:LHand
+      position: {x: -0.0047158245, y: -0.0011593798, z: 0.004506011}
+      rotation: {x: -0.030676123, y: 0.5318309, z: -0.04836915, w: 0.8449115}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: PlayerMa:Lthumb2
+      parentName: PlayerMa:Lthumb1
+      position: {x: -0.0020285205, y: -0.0004599192, z: -3.4152935e-18}
+      rotation: {x: -0.00626071, y: -0.04253525, z: -0.0031197239, w: 0.9990705}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: PlayerMa:Lthumb3
+      parentName: PlayerMa:Lthumb2
+      position: {x: -0.0014198894, y: -0.0003449394, z: 1.7763568e-17}
+      rotation: {x: 0.000000010068107, y: -0.4719417, z: -0.000000053812105, w: 0.8816298}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:RSholder
+      parentName: PlayerMa:Spine
+      position: {x: -0.0017975601, y: -0.011748354, z: 0.00037587248}
+      rotation: {x: -0.014005939, y: -0.013084966, z: 0.697828, w: -0.7160089}
+      scale: {x: 1.0000001, y: 1.0000027, z: 1.0000035}
+    - name: PlayerMa:Rhizi
+      parentName: PlayerMa:RSholder
+      position: {x: 0.018689878, y: -0.00087608804, z: 0.0023202102}
+      rotation: {x: -0.0003128722, y: -0.011782646, z: -0.020292642, w: 0.9997246}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.000001}
+    - name: PlayerMa:RHand
+      parentName: PlayerMa:Rhizi
+      position: {x: 0.020971486, y: -0.00013107067, z: -0.0013331014}
+      rotation: {x: -0.0004962213, y: -0.158793, z: -0.0030852493, w: 0.987307}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000008}
+    - name: PlayerMa:Rpinky1
+      parentName: PlayerMa:RHand
+      position: {x: 0.009256633, y: -0.0000004520839, z: 0.00000011507033}
+      rotation: {x: -0.0006768426, y: 0.09279983, z: -0.011067582, w: 0.99562305}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: PlayerMa:Rpinky2
+      parentName: PlayerMa:Rpinky1
+      position: {x: 0.0022524106, y: -0.00000020163128, z: 0.00000007649315}
+      rotation: {x: 0.0000017380221, y: -0.039559267, z: -0.000025945874, w: 0.9992172}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.000001}
+    - name: PlayerMa:Rpinky3
+      parentName: PlayerMa:Rpinky2
+      position: {x: 0.0014810547, y: 1.7763568e-17, z: -0.000000028634442}
+      rotation: {x: -0.6883053, y: 0.70300055, z: 0.12519915, w: -0.12787208}
+      scale: {x: 0.9999996, y: 0.99999994, z: 0.9999996}
+    - name: PlayerMa:Rring1
+      parentName: PlayerMa:RHand
+      position: {x: 0.009105663, y: -0.0005247392, z: -0.0016410002}
+      rotation: {x: 0.000000043946784, y: 0.09538858, z: 0.00000002055458, w: 0.9954401}
+      scale: {x: 1, y: 1.0000004, z: 1.0000002}
+    - name: PlayerMa:Rring2
+      parentName: PlayerMa:Rring1
+      position: {x: 0.0029060345, y: 0.00000016540639, z: -0.000000042942638}
+      rotation: {x: 0.000000034238962, y: -0.027616866, z: -0.00000008177075, w: 0.99961865}
+      scale: {x: 1.0000008, y: 1.0000002, z: 1.0000008}
+    - name: PlayerMa:Rring3
+      parentName: PlayerMa:Rring2
+      position: {x: 0.0026379016, y: 1.7763568e-17, z: 0.0000000065552133}
+      rotation: {x: -0.000000042187672, y: -0.06786124, z: 0.00000005153056, w: 0.99769485}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000002}
+    - name: PlayerMa:Rmiddle1
+      parentName: PlayerMa:RHand
+      position: {x: 0.008858057, y: -0.00071285095, z: -0.0031345945}
+      rotation: {x: -0.0000000051804814, y: 0.15005136, z: 0.000000019014804, w: 0.9886782}
+      scale: {x: 1, y: 1.0000005, z: 1.0000002}
+    - name: PlayerMa:Rmiddle2
+      parentName: PlayerMa:Rmiddle1
+      position: {x: 0.0031022786, y: 0.000000064714335, z: 0.0000000010091812}
+      rotation: {x: 0.00000010334387, y: 0.01761879, z: -0.00000007315802, w: 0.99984485}
+      scale: {x: 1.0000005, y: 0.99999946, z: 1.0000001}
+    - name: PlayerMa:Rmiddle3
+      parentName: PlayerMa:Rmiddle2
+      position: {x: 0.002347161, y: 0, z: 0.0000000019295276}
+      rotation: {x: -0.000000026286422, y: -0.16744739, z: 0.0000000918603, w: 0.9858811}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: PlayerMa:Rindex1
+      parentName: PlayerMa:RHand
+      position: {x: 0.008305953, y: -0.00018350051, z: -0.004542023}
+      rotation: {x: 0.000000016298143, y: 0.19865862, z: -0.000000038631693, w: 0.9800688}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: PlayerMa:Rindex2
+      parentName: PlayerMa:Rindex1
+      position: {x: 0.0027122414, y: -0.00000009264338, z: -0.0000000194708}
+      rotation: {x: -0.000000032087517, y: 0.029023688, z: 0.000000007948433, w: 0.9995788}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.000001}
+    - name: PlayerMa:Rindex3
+      parentName: PlayerMa:Rindex2
+      position: {x: 0.0013857847, y: 5.3290704e-17, z: -0.000000003961367}
+      rotation: {x: 0.000000027861587, y: -0.22702011, z: 0.000000017632491, w: 0.97389007}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000002}
+    - name: PlayerMa:Rthumb1
+      parentName: PlayerMa:RHand
+      position: {x: 0.004715816, y: 0.0011589774, z: -0.0045059896}
+      rotation: {x: -0.030696673, y: 0.53183216, z: -0.04840157, w: 0.8449081}
+      scale: {x: 1, y: 1.0000008, z: 1.0000005}
+    - name: PlayerMa:Rthumb2
+      parentName: PlayerMa:Rthumb1
+      position: {x: 0.002028544, y: 0.00045999998, z: 0.000000023798515}
+      rotation: {x: -0.006261521, y: -0.042535435, z: -0.0031182882, w: 0.9990705}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+    - name: PlayerMa:Rthumb3
+      parentName: PlayerMa:Rthumb2
+      position: {x: 0.0014199138, y: 0.00034499998, z: 0.00000001735935}
+      rotation: {x: 0.0000000039780126, y: -0.47194183, z: -0.000000002232463, w: 0.8816297}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: PlayerMa:DummyA
+      parentName: PlayerMa:Spine
+      position: {x: 0.0000073400033, y: 0.00034742578, z: -0.008252062}
+      rotation: {x: 0.000000046566132, y: 0.0000000058207643, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000006}
+    - name: PlayerMa:Hip
+      parentName: PlayerMa:Root
+      position: {x: -0.015502145, y: -0.0065109977, z: 5.824013e-11}
+      rotation: {x: -0.000000022871745, y: 0.00000001243018, z: -0.034164067, w: 0.99941623}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: PlayerMa:LLeg
+      parentName: PlayerMa:Hip
+      position: {x: -0.01759517, y: 0.00057663076, z: -1.8318679e-17}
+      rotation: {x: 0.9628621, y: 0.26999396, z: 0.000000016709688, w: -0.000000022077527}
+      scale: {x: 1.0000021, y: 1.0000026, z: 1.0000039}
+    - name: PlayerMa:Lknee
+      parentName: PlayerMa:LLeg
+      position: {x: -0.019789984, y: -0.001648864, z: -0.000010000001}
+      rotation: {x: -0.00000000727185, y: -4.8877784e-11, z: 0.033589225, w: 0.9994358}
+      scale: {x: 1.0000026, y: 1.0000019, z: 1.0000031}
+    - name: PlayerMa:Lfoot1
+      parentName: PlayerMa:Lknee
+      position: {x: -0.04540252, y: -0.00072354637, z: -4.857226e-19}
+      rotation: {x: -0.6963566, y: -0.70754236, z: 0.08438249, w: -0.08573794}
+      scale: {x: 1.0000001, y: 1, z: 1.0000005}
+    - name: PlayerMa:Lfoot2
+      parentName: PlayerMa:Lfoot1
+      position: {x: 0.004222466, y: 0.00027242297, z: 0.0074405437}
+      rotation: {x: 0.0000000014551939, y: 0.000000021827868, z: -0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: PlayerMa:RReg
+      parentName: PlayerMa:Hip
+      position: {x: -0.0101307975, y: -0.014352113, z: 0.0000000048367736}
+      rotation: {x: -0.000000037808533, y: 0.000000022185654, z: -0.981955, w: 0.18911485}
+      scale: {x: 1.0000035, y: 1.0000035, z: 1}
+    - name: PlayerMa:Rknee
+      parentName: PlayerMa:RReg
+      position: {x: 0.019790027, y: 0.0016488679, z: 0.000010000001}
+      rotation: {x: 0.000000013394609, y: 0.000000051966307, z: 0.03358936, w: 0.9994357}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: PlayerMa:Rfoot1
+      parentName: PlayerMa:Rknee
+      position: {x: 0.045402475, y: 0.0007235454, z: 0}
+      rotation: {x: 0.70145065, y: 0.7127181, z: 0.0000000082971345, w: 0.000000008165959}
+      scale: {x: 1, y: 1.0000005, z: 1.0000002}
+    - name: PlayerMa:Rfoot2
+      parentName: PlayerMa:Rfoot1
+      position: {x: 0.0012121358, y: 0.00015176972, z: -0.00846718}
+      rotation: {x: 0.11717746, y: 0.000000014901158, z: 0.000000029802315, w: 0.993111}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: PlayerMa:Player_Contoroller
+      parentName: dame1(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:RootC
+      parentName: PlayerMa:Player_Contoroller
+      position: {x: -0, y: 0, z: 0.02487198}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:LowerC
+      parentName: PlayerMa:RootC
+      position: {x: 0.00003913038, y: 0.07318607, z: -0.0027823448}
+      rotation: {x: 0.009573082, y: 0.33773467, z: -0.003435198, w: 0.9411864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:UpperC
+      parentName: PlayerMa:LowerC
+      position: {x: -0, y: 0.020675099, z: 0}
+      rotation: {x: 0.078311846, y: -0.07927003, z: 0.051873405, w: 0.9924176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:HeadC
+      parentName: PlayerMa:UpperC
+      position: {x: -0.00003913038, y: 0.008517186, z: 0}
+      rotation: {x: 0, y: -0.15451579, z: -0, w: 0.9879903}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:RSholderC
+      parentName: PlayerMa:UpperC
+      position: {x: 0.012311069, y: 0.009537179, z: -0.0009871032}
+      rotation: {x: -0.3376181, y: -0.27641568, z: 0.11980665, w: 0.8917706}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:RArmrC
+      parentName: PlayerMa:RSholderC
+      position: {x: 0.018710399, y: 1.7763568e-17, z: -0.0013331017}
+      rotation: {x: 0, y: -0.5137533, z: -0, w: 0.85793793}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:RHandC
+      parentName: PlayerMa:RArmrC
+      position: {x: 0.020971898, y: -1.7763568e-17, z: 0.0013331017}
+      rotation: {x: 0.1246135, y: 0.11769843, z: 0.4462878, w: 0.87831986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_PinkyC1
+      parentName: PlayerMa:RHandC
+      position: {x: 0.00879019, y: 0.0000004196167, z: -0.002902607}
+      rotation: {x: 0, y: 0, z: -0.7458771, w: 0.66608363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_PinkyC2
+      parentName: PlayerMa:R_PinkyC1
+      position: {x: 0.00220955, y: 0, z: -0.00043916464}
+      rotation: {x: 0, y: -0, z: -0.45163485, w: 0.8922029}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_RingC1
+      parentName: PlayerMa:RHandC
+      position: {x: 0.009160731, y: 0.00052473065, z: -0.0012969098}
+      rotation: {x: 0, y: 0, z: -0.7287698, w: 0.6847588}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_RingC2
+      parentName: PlayerMa:R_RingC1
+      position: {x: 0.0028820299, y: 0, z: -0.00037054537}
+      rotation: {x: 0, y: -0, z: -0.48966718, w: 0.87190944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_MiddleC1
+      parentName: PlayerMa:RHandC
+      position: {x: 0.00939404, y: 0.00071283337, z: 0.00019899665}
+      rotation: {x: 0, y: 0, z: -0.74309874, w: 0.66918176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_MiddleC2
+      parentName: PlayerMa:R_MiddleC1
+      position: {x: 0.0031016099, y: 0, z: -0.000054895878}
+      rotation: {x: 0, y: -0, z: -0.57129014, w: 0.82074815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_IndexC1
+      parentName: PlayerMa:RHandC
+      position: {x: 0.0093117, y: 0.00018344879, z: 0.0017086264}
+      rotation: {x: 0.05216602, y: -0.048664074, z: -0.7485933, w: 0.65918034}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_IndexC2
+      parentName: PlayerMa:R_IndexC1
+      position: {x: 0.00270361, y: 0, z: 0.00021958261}
+      rotation: {x: 0, y: -0, z: -0.31233776, w: 0.94997114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_ThumbC1
+      parentName: PlayerMa:RHandC
+      position: {x: 0.0058909208, y: -0.0011589527, z: 0.0028000842}
+      rotation: {x: 0.35377997, y: 0.08341951, z: -0.2308484, w: 0.9025464}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_ThumbC2
+      parentName: PlayerMa:R_ThumbC1
+      position: {x: 0.0014098699, y: -0.00045991896, z: 0.0014584826}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder1
+      parentName: PlayerMa:RHandC
+      position: {x: 0.011239772, y: -0.0016595363, z: 0.017502775}
+      rotation: {x: 0.70526785, y: 0.11040153, z: -0.05096325, w: 0.69843507}
+      scale: {x: 0.12560894, y: 6.300243, z: 0.12560894}
+    - name: PlayerMa:LSholderC
+      parentName: PlayerMa:UpperC
+      position: {x: -0.012389302, y: 0.009537598, z: -0.0009871032}
+      rotation: {x: -0.30204508, y: -0.079865985, z: 0.24509633, w: 0.91777885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:LArmC
+      parentName: PlayerMa:LSholderC
+      position: {x: -0.01871039, y: -0.0000004196167, z: -0.0013330993}
+      rotation: {x: 0, y: 0.15238214, z: -0, w: 0.98832166}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:LHandC
+      parentName: PlayerMa:LArmC
+      position: {x: -0.020971961, y: 0.0000004196167, z: 0.0013330993}
+      rotation: {x: -0.29901427, y: -0.074663535, z: -0.09939903, w: 0.9461161}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_PinkyC1
+      parentName: PlayerMa:LHandC
+      position: {x: -0.010999713, y: 0, z: -0.0033417717}
+      rotation: {x: -0.08006812, y: 0.08301364, z: 0.6376597, w: 0.76163507}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_PinkyC2
+      parentName: PlayerMa:L_PinkyC1
+      position: {x: -0.0022878647, y: 0, z: -0.00033930063}
+      rotation: {x: 0, y: 0, z: 0.70221305, w: 0.7119669}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_RingC1
+      parentName: PlayerMa:LHandC
+      position: {x: -0.00916071, y: 0.00052431104, z: -0.0012969098}
+      rotation: {x: 0, y: 0, z: 0.4950947, w: 0.868839}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_RingC2
+      parentName: PlayerMa:L_RingC1
+      position: {x: -0.0028820229, y: 0, z: -0.00037054537}
+      rotation: {x: 0, y: 0, z: 0.5271166, w: 0.84979296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_MiddleC1
+      parentName: PlayerMa:LHandC
+      position: {x: -0.009394016, y: 0.00071241375, z: 0.00019899665}
+      rotation: {x: 0, y: 0, z: 0.50659555, w: 0.8621838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_MiddleC2
+      parentName: PlayerMa:L_MiddleC1
+      position: {x: -0.0031016064, y: 0, z: -0.000054895878}
+      rotation: {x: 0, y: 0, z: 0.59642285, w: 0.8026704}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_IndexC1
+      parentName: PlayerMa:LHandC
+      position: {x: -0.009311676, y: 0.00018302917, z: 0.0017086264}
+      rotation: {x: 0, y: 0, z: 0.4496547, w: 0.8932025}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_IndexC2
+      parentName: PlayerMa:L_IndexC1
+      position: {x: -0.0027036094, y: 0, z: 0.00021958261}
+      rotation: {x: 0, y: 0, z: 0.56274825, w: 0.8266283}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_ThumbC1
+      parentName: PlayerMa:LHandC
+      position: {x: -0.0058908984, y: -0.0011593723, z: 0.002800084}
+      rotation: {x: 0, y: 0, z: 0.20016263, w: 0.97976273}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_ThumbC2
+      parentName: PlayerMa:L_ThumbC1
+      position: {x: -0.0014098692, y: -0.00045991896, z: 0.0014584826}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder2
+      parentName: PlayerMa:LHandC
+      position: {x: -0.006665454, y: -0.001659956, z: 0.02476371}
+      rotation: {x: -0.010355568, y: 0.7049245, z: 0.707031, w: -0.055510953}
+      scale: {x: 0.12560894, y: 5.9594355, z: 0.12560894}
+    - name: PlayerMa:R_FootC
+      parentName: PlayerMa:RootC
+      position: {x: 0.02098155, y: 0.004733761, z: -0.015892126}
+      rotation: {x: 0, y: 0.61613005, z: -0, w: 0.78764445}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_FootC
+      parentName: PlayerMa:RootC
+      position: {x: -0.027645916, y: 0.0047331555, z: 0.020539284}
+      rotation: {x: 0, y: 0.27135107, z: -0, w: 0.9624804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:L_KneeC
+      parentName: PlayerMa:RootC
+      position: {x: -0.008345422, y: 0.050141443, z: 0.032229654}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:R_KneeC
+      parentName: PlayerMa:RootC
+      position: {x: 0.048165407, y: 0.050141443, z: 0.008535394}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Player
+      parentName: dame1(Clone)
+      position: {x: -0.008345422, y: 0.00357322, z: 0.0056982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:leg
+      parentName: PlayerMa:Player:Player
+      position: {x: 0.008345422, y: -0.00357322, z: -0.0056982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Lleg
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Lknee_guard
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Lleg_guard
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Lfoot
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Rleg
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Rknee_guard
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Rleg_guard
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Rfoot
+      parentName: PlayerMa:Player:leg
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:body
+      parentName: PlayerMa:Player:Player
+      position: {x: 0.008345422, y: -0.00357322, z: -0.0056982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:chestplate
+      parentName: PlayerMa:Player:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:waist_guard
+      parentName: PlayerMa:Player:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:polySurface119
+      parentName: PlayerMa:Player:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:hoka
+      parentName: PlayerMa:Player:Player
+      position: {x: 0.008345422, y: -0.00357322, z: -0.0056982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:shoL3
+      parentName: PlayerMa:Player:hoka
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:kabuto
+      parentName: PlayerMa:Player:hoka
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:shoL
+      parentName: PlayerMa:Player:hoka
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:main
+      parentName: PlayerMa:Player:hoka
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Rhand
+      parentName: PlayerMa:Player:Player
+      position: {x: 0.008345422, y: -0.00357322, z: -0.0056982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerMa:Player:Lhand
+      parentName: PlayerMa:Player:Player
+      position: {x: 0.008345422, y: -0.00357322, z: -0.0056982}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

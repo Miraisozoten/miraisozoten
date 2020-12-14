@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     static int idleState = Animator.StringToHash("Nomal Layer.Idle");
     static int runState = Animator.StringToHash("Nomal Layer.Run");
     static int runstopState = Animator.StringToHash("Nomal Layer.Run to stop");
-    static int rollState = Animator.StringToHash("Attack Layer.Roll");
+    static int rollState = Animator.StringToHash("Nomal Layer.Roll");
     static int attackState = Animator.StringToHash("Attack Layer.Attack");
     static int attacksoftState = Animator.StringToHash("Attack Layer.Attack soft");
     static int attackhardState = Animator.StringToHash("Attack Layer.Attack hard");
@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
     public float RollSpeed;
 
     PlayerStatusComponent p_Status;
+    Quaternion Roll_Q;
 
     void Start()
     {
@@ -109,7 +110,7 @@ public class Player : MonoBehaviour
         idleState = Animator.StringToHash("Nomal Layer.Idle");
         runState = Animator.StringToHash("Nomal Layer.Run");
         runstopState = Animator.StringToHash("Nomal Layer.Run to stop");
-        rollState = Animator.StringToHash("Attack Layer.Roll");
+        rollState = Animator.StringToHash("Nomal Layer.Roll");
         attackState = Animator.StringToHash("Attack Layer.Attack");
         attacksoftState = Animator.StringToHash("Attack Layer.Attack soft");
         attackhardState = Animator.StringToHash("Attack Layer.Attack hard");
@@ -222,6 +223,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             anim.SetBool("Roll", true);
+            Roll_Q = refCamera.hRotation;
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -268,8 +270,13 @@ public class Player : MonoBehaviour
         //}
 
         // 現在のベースレイヤーがrollStateの時
-         if (currentBaseState.nameHash == rollState)
+        else if (currentBaseState.nameHash == rollState)
         {
+            Debug.Log("roll");
+            //Vector3 pos = transform.position;
+            float Rolling = anim.GetFloat("Rolling");
+            transform.position += transform.forward * Rolling * Time.deltaTime;
+            //transform.position = transform.rotation * velocity;
             // ステートがトランジション中でない場合
             if (!anim.IsInTransition(0))
             {
@@ -277,8 +284,8 @@ public class Player : MonoBehaviour
                 Ray ray = new Ray(transform.position + Vector3.up, -Vector3.up);
                 RaycastHit hitInfo = new RaycastHit();
                 float RollHeight = anim.GetFloat("RollHeight");
-                Debug.Log(ray);
-                Debug.DrawRay(ray.origin, ray.direction, Color.red, 3.0f);
+                //Debug.Log(ray);
+                //Debug.DrawRay(ray.origin, ray.direction, Color.red, 3.0f);
 
                 // 高さが useCurvesHeight 以上ある時のみ、コライダーの高さと中心をJUMP00アニメーションについているカーブで調整する
                 if (Physics.Raycast(ray, out hitInfo))
@@ -301,6 +308,8 @@ public class Player : MonoBehaviour
         // 現在のベースレイヤーがidleStateの時
         else if (currentBaseState.nameHash == idleState || currentBaseState.nameHash == runState)
         {
+            Debug.Log("Idle or run");
+
             //カーブでコライダ調整をしている時は、念のためにリセットする
             if (useCurves)
             {
@@ -406,7 +415,8 @@ public class Player : MonoBehaviour
         if (ExAction > 2)
         {
             ExAction = 0;
-        }else if (ExAction < 0)
+        }
+        else if (ExAction < 0)
         {
             ExAction = 2;
         }

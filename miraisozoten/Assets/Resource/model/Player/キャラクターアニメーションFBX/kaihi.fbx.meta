@@ -1,0 +1,361 @@
+fileFormatVersion: 2
+guid: 5076a31ed0d081343aa031056e2abc85
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: roal
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: roal
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PlayerMa:Player:Player
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body/PlayerMa:Player:chestplate
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body/PlayerMa:Player:polySurface119
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:body/PlayerMa:Player:waist_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:kabuto
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:main
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:shoL
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:hoka/PlayerMa:Player:shoL3
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lfoot
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lknee_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lleg
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Lleg_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rfoot
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rknee_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rleg
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:leg/PlayerMa:Player:Rleg_guard
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:Lhand
+        weight: 1
+      - path: PlayerMa:Player:Player/PlayerMa:Player:Rhand
+        weight: 1
+      - path: PlayerMa:Player_Contoroller
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:L_FootC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:L_KneeC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:HeadC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/pCylinder2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_IndexC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_IndexC1/PlayerMa:L_IndexC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_MiddleC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_MiddleC1/PlayerMa:L_MiddleC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_PinkyC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_PinkyC1/PlayerMa:L_PinkyC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_RingC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_RingC1/PlayerMa:L_RingC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_ThumbC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:LSholderC/PlayerMa:LArmC/PlayerMa:LHandC/PlayerMa:L_ThumbC1/PlayerMa:L_ThumbC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/pCylinder1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_IndexC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_IndexC1/PlayerMa:R_IndexC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_MiddleC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_MiddleC1/PlayerMa:R_MiddleC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_PinkyC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_PinkyC1/PlayerMa:R_PinkyC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_RingC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_RingC1/PlayerMa:R_RingC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_ThumbC1
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:LowerC/PlayerMa:UpperC/PlayerMa:RSholderC/PlayerMa:RArmrC/PlayerMa:RHandC/PlayerMa:R_ThumbC1/PlayerMa:R_ThumbC2
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:R_FootC
+        weight: 1
+      - path: PlayerMa:Player_Contoroller/PlayerMa:RootC/PlayerMa:R_KneeC
+        weight: 1
+      - path: PlayerMa:Player_Joint
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:L_footSubJ1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:L_footSubJ1/PlayerMa:L_footSubJ2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:L_LegIK
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:R_footSubJ1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:R_footSubJ1/PlayerMa:R_footSubJ2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:R_LegIK
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg/PlayerMa:Lknee
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg/PlayerMa:Lknee/PlayerMa:Lfoot1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:LLeg/PlayerMa:Lknee/PlayerMa:Lfoot1/PlayerMa:Lfoot2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg/PlayerMa:Rknee
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg/PlayerMa:Rknee/PlayerMa:Rfoot1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Hip/PlayerMa:RReg/PlayerMa:Rknee/PlayerMa:Rfoot1/PlayerMa:Rfoot2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:DummyA
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:Head
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lindex1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lindex1/PlayerMa:Lindex2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lindex1/PlayerMa:Lindex2/PlayerMa:Lindex3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lmiddle1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lmiddle1/PlayerMa:Lmiddle2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lmiddle1/PlayerMa:Lmiddle2/PlayerMa:Lmiddle3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lpinky1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lpinky1/PlayerMa:Lpinky2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lpinky1/PlayerMa:Lpinky2/PlayerMa:Lpinky3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lring1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lring1/PlayerMa:Lring2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lring1/PlayerMa:Lring2/PlayerMa:Lring3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lthumb1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lthumb1/PlayerMa:Lthumb2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:LSholder/PlayerMa:Lhizi/PlayerMa:LHand/PlayerMa:Lthumb1/PlayerMa:Lthumb2/PlayerMa:Lthumb3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rindex1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rindex1/PlayerMa:Rindex2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rindex1/PlayerMa:Rindex2/PlayerMa:Rindex3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rmiddle1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rmiddle1/PlayerMa:Rmiddle2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rmiddle1/PlayerMa:Rmiddle2/PlayerMa:Rmiddle3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rpinky1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rpinky1/PlayerMa:Rpinky2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rpinky1/PlayerMa:Rpinky2/PlayerMa:Rpinky3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rring1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rring1/PlayerMa:Rring2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rring1/PlayerMa:Rring2/PlayerMa:Rring3
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rthumb1
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rthumb1/PlayerMa:Rthumb2
+        weight: 1
+      - path: PlayerMa:Player_Joint/PlayerMa:Root/PlayerMa:Spine/PlayerMa:RSholder/PlayerMa:Rhizi/PlayerMa:RHand/PlayerMa:Rthumb1/PlayerMa:Rthumb2/PlayerMa:Rthumb3
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

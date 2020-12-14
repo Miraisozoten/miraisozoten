@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using KanKikuchi.AudioManager;
 
 public class EnemyEffect : MonoBehaviour
 {
@@ -88,8 +89,9 @@ public class EnemyEffect : MonoBehaviour
     public void EffectOn()
     {
         EffectTrigger = true;
+        SEManager.Instance.Play("EnemyHit");
 
-        for(int i = 0; i < EffectParticleList.Count; i++)
+        for (int i = 0; i < EffectParticleList.Count; i++)
         {
             EffectParticleList[i].Play();
         }

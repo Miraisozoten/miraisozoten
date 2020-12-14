@@ -40,7 +40,6 @@ public class SwordComponent : MonoBehaviour
             //        return;
             //    }
             //}
-            SEManager.Instance.Play("EnemyHit");
             other.GetComponent<EnemyEffect>().EffectOn();
             //Destroy(other.gameObject);
             P_Status.ExpUp();
