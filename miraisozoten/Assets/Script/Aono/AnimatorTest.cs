@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AnimatorTest : MonoBehaviour
 {
-    [SerializeField]
-    private float walkSpeed;
     private Animator animator;
 
     // Start is called before the first frame update
