@@ -103,15 +103,21 @@ public class PlayerFollowCamera : MonoBehaviour
         RaycastHit hit;
         Vector3 centerPos = player.position;
         centerPos.y += playerpos_y;
-
+        int Layer = 8;
+        Layer = ~Layer;
         //Debug.Log(player.position);
-        if(Physics.Linecast(centerPos,transform.position,out hit))
-        {
-            //Debug.Log(hit.point);
-            if (hit.collider.tag != "Player" || hit.collider.tag != "Weapon")
-            {
-                transform.position = hit.point;
-            }
-        }
+        //カメラのめり込み防止
+        //if(Physics.Linecast(centerPos,transform.position,out hit))
+        //{
+        //    if (LayerMask.LayerToName(hit.collider.gameObject.layer) == "Enemy")
+        //    {
+        //        Debug.Log("EnemyHitLay");
+        //    }
+        //    //Debug.Log(hit.collider.tag);
+        //    else if (hit.collider.tag != "Player" || hit.collider.tag != "Weapon" )
+        //    {
+        //        transform.position = hit.point;
+        //    }
+        //}
     }
 }

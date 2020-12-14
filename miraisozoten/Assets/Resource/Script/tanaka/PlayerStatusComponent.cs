@@ -55,8 +55,9 @@ public class PlayerStatusComponent : StatusComponent
     private float Timebutton;
 
     [SerializeField, Header("武器")]
-    public GameObject WeaponObj;
-    private BoxCollider WeaponColider;
+    public GameObject WeaponObj1;
+    public GameObject WeaponObj2;
+    private BoxCollider[] WeaponColider;
 
     //private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
     //private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
@@ -82,9 +83,11 @@ public class PlayerStatusComponent : StatusComponent
         }
 
         //anim = GetComponent<Animator>();
-
-        WeaponColider = WeaponObj.GetComponent<BoxCollider>();
-        WeaponColider.enabled = false;
+        WeaponColider = new BoxCollider[2];
+        WeaponColider[0] = WeaponObj1.GetComponent<BoxCollider>();
+        WeaponColider[0].enabled = false;
+        WeaponColider[1] = WeaponObj2.GetComponent<BoxCollider>();
+        WeaponColider[1].enabled = false;
 
         playerCom = GetComponent<Player>();
     }
@@ -119,11 +122,13 @@ public class PlayerStatusComponent : StatusComponent
 
         if (playerCom.IsAttack())
         {
-            WeaponColider.enabled = true;
+            WeaponColider[0].enabled = true;
+            WeaponColider[1].enabled = true;
         }
         else
         {
-            WeaponColider.enabled = false;
+            WeaponColider[0].enabled = false;
+            WeaponColider[1].enabled = false;
         }
 
         if (HP_Max_Icon >= HP_Icon)
@@ -324,7 +329,7 @@ public class PlayerStatusComponent : StatusComponent
 
     public bool GetWeaponCollider()
     {
-        return WeaponColider.enabled;
+        return WeaponColider[0].enabled;
     }
 }
 
