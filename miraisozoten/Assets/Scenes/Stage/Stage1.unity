@@ -4239,6 +4239,12 @@ PrefabInstance:
       propertyPath: ExPanel
       value: 
       objectReference: {fileID: 2077291170}
+    - target: {fileID: 1972256759970910867, guid: 8e927aa8ba24800438ade886e595c4be,
+        type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 3357837029670511511, guid: 6818561b549e5cc4aa30c675b5f22525,
+        type: 3}
     - target: {fileID: 2077395758551203990, guid: 8e927aa8ba24800438ade886e595c4be,
         type: 3}
       propertyPath: m_LocalPosition.x
