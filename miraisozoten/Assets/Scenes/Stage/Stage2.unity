@@ -11366,12 +11366,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc00aab85b301f242896a77c4b442ec0, type: 3}
---- !u!1 &1477127612 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6982011493720172820, guid: a5dd5651c0a4a1242a3a388994bb881f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1253671328}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1489969744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4844902911259396, guid: 01bdef6597b249b44a9530ab656246fc,
@@ -15825,7 +15819,7 @@ PrefabInstance:
         type: 3}
       propertyPath: HpIconPanel
       value: 
-      objectReference: {fileID: 1477127612}
+      objectReference: {fileID: 0}
     - target: {fileID: 1972256759970910867, guid: 8e927aa8ba24800438ade886e595c4be,
         type: 3}
       propertyPath: ExPanel
