@@ -27,10 +27,12 @@ public class PlayerStatusComponent : StatusComponent
     public int HP_Amount;
     [SerializeField, Header("最大体力(アイコン数)")]
     public int HP_Max_Icon;
-    [SerializeField, Header("体力アイコン左")]
-    public GameObject LeftIcon;
-    [SerializeField, Header("体力アイコン右")]
-    public GameObject RightIcon;
+    [SerializeField, Header("体力アイコン")]
+    public GameObject Icon;
+    //[SerializeField, Header("体力アイコン左")]
+    //public GameObject LeftIcon;
+    //[SerializeField, Header("体力アイコン右")]
+    //public GameObject RightIcon;
     [SerializeField, Header("体力アイコンパネル")]
     public GameObject HpIconPanel;
 
@@ -74,8 +76,9 @@ public class PlayerStatusComponent : StatusComponent
 
         for (int i = 0; i < HP_Max_Icon; i++)
         {
-            LifeList.Add(Instantiate<GameObject>(LeftIcon, HpIconPanel.transform));
-            LifeList.Add(Instantiate<GameObject>(RightIcon, HpIconPanel.transform));
+            LifeList.Add(Instantiate<GameObject>(Icon, HpIconPanel.transform));
+            //LifeList.Add(Instantiate<GameObject>(LeftIcon, HpIconPanel.transform));
+            //LifeList.Add(Instantiate<GameObject>(RightIcon, HpIconPanel.transform));
         }
         for (int i = 0; i < Ex_Max_Icon; i++)
         {
@@ -264,8 +267,9 @@ public class PlayerStatusComponent : StatusComponent
         //生成
         for (int i = 0; i < HP_Max_Icon; i++)
         {
-            LifeList.Add(Instantiate<GameObject>(LeftIcon, HpIconPanel.transform));
-            LifeList.Add(Instantiate<GameObject>(RightIcon, HpIconPanel.transform));
+            LifeList.Add(Instantiate<GameObject>(Icon, HpIconPanel.transform));
+            //LifeList.Add(Instantiate<GameObject>(LeftIcon, HpIconPanel.transform));
+            //LifeList.Add(Instantiate<GameObject>(RightIcon, HpIconPanel.transform));
         }
     }
 
