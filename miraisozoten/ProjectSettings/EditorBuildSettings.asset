@@ -30,16 +30,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Result.unity
     guid: 47da429ab65f5094796cf57ccbc944e6
   - enabled: 1
-    path: Assets/Scenes/Results/Result_1.unity
+    path: Assets/Scenes/K/Results/Result_1.unity
     guid: a61ab388730fe1142aea7bce0da269c8
   - enabled: 1
-    path: Assets/Scenes/Results/Result_2.unity
+    path: Assets/Scenes/K/Results/Result_2.unity
     guid: b7bc16d01422f64419709e82c1fabcd4
   - enabled: 1
-    path: Assets/Scenes/Results/Result_3.unity
+    path: Assets/Scenes/K/Results/Result_3.unity
     guid: 1ab5b48aea3a80948b9867883d7c0c98
   - enabled: 1
-    path: Assets/Scenes/Results/Result_4.unity
+    path: Assets/Scenes/K/Results/Result_4.unity
     guid: 72af6c367390b15489637cfdfbbbdd5d
   - enabled: 1
     path: Assets/Scenes/EnemyTest.unity
