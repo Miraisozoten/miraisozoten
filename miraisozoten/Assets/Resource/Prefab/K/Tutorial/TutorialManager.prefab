@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4268474271266051141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4268474271266051143}
+  - component: {fileID: 4268474271266051142}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4268474271266051143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268474271266051141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4268474271266051142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268474271266051141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7721e75ea43444689be64b8913926c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIPosition: {x: 400, y: 250, z: 0}
+  UIScale: {x: 2, y: 2, z: 0}
+  Player: {fileID: 0}
+  canvas: {fileID: 5410753424999879352, guid: 8f644e47188c5774aa5fc6438baf19e6, type: 3}
+  move: {fileID: 6553987890752399909, guid: 7d867e607fc017447945745ad231ab8b, type: 3}
+  camera_move: {fileID: 8322620437053333589, guid: bee191d790f522b45a42c36722bbb1dc,
+    type: 3}
+  attack: {fileID: 8794680983683872746, guid: 7b818b16a5ab53249b71bcdb7d38d826, type: 3}
