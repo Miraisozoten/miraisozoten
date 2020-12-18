@@ -36,18 +36,28 @@ public class CameraMover : MonoBehaviour
     //UIメッセージの表示
     private bool _uiMessageActiv;
 
+    Camera camera1;
+    GameObject mainCam;
+    public float cameraspeep=1.0f;
+ 
     void Start()
     {
         _camTransform = this.gameObject.transform;
 
         //初期回転の保存
         _initialCamRotation = this.gameObject.transform.rotation;
+
+        camera1 = Camera.main;
     }
 
     void Update()
     {
 
         CamControlIsActive(); //カメラ操作の有効無効
+
+        float angle = Input.GetAxis("Horizontal") * cameraspeep;
+        Vector3 Camerapos = camera1.transform.position;
+        transform.RotateAround(Camerapos,Vector3.up,angle); 
 
         if (_cameraMoveActive)
         {
@@ -106,7 +116,7 @@ public class CameraMover : MonoBehaviour
             _camTransform.rotation = Quaternion.Euler(eulerX, eulerY, 0);
         }
     }
-
+    Camera camera;
     //カメラの移動 マウス
     private void CameraSlideMouseControl()
     {
@@ -116,19 +126,19 @@ public class CameraMover : MonoBehaviour
             _presentCamPos = _camTransform.position;
         }
 
-        if (Input.GetMouseButton(1))
-        {
-            //(移動開始座標 - マウスの現在座標) / 解像度 で正規化
-            float x = (_startMousePos.x - Input.mousePosition.x) / Screen.width;
-            float y = (_startMousePos.y - Input.mousePosition.y) / Screen.height;
+        //if (Input.GetMouseButton(1))
+        //{
+        //    //(移動開始座標 - マウスの現在座標) / 解像度 で正規化
+        //    float x = (_startMousePos.x - Input.mousePosition.x) / Screen.width;
+        //    float y = (_startMousePos.y - Input.mousePosition.y) / Screen.height;
 
-            x = x * _positionStep;
-            y = y * _positionStep;
+            //    x = x * _positionStep;
+            //    y = y * _positionStep;
 
-            Vector3 velocity = _camTransform.rotation * new Vector3(x, y, 0);
-            velocity = velocity + _presentCamPos;
-            _camTransform.position = velocity;
-        }
+            //    Vector3 velocity = _camTransform.rotation * new Vector3(x, y, 0);
+            //    velocity = velocity + _presentCamPos;
+            //    _camTransform.position = velocity;
+            //}
     }
 
     //カメラのローカル移動 キー
@@ -136,17 +146,17 @@ public class CameraMover : MonoBehaviour
     {
         Vector3 campos = _camTransform.position;
 
-        if (Input.GetKey(KeyCode.D)) { campos += _camTransform.right * Time.deltaTime * _positionStep; }
-        if (Input.GetKey(KeyCode.A)) { campos -= _camTransform.right * Time.deltaTime * _positionStep; }
-        if (Input.GetKey(KeyCode.E)) { campos += _camTransform.up * Time.deltaTime * _positionStep; }
-        if (Input.GetKey(KeyCode.Q)) { campos -= _camTransform.up * Time.deltaTime * _positionStep; }
-        if (Input.GetKey(KeyCode.W)) { campos += _camTransform.forward * Time.deltaTime * _positionStep; }
-        if (Input.GetKey(KeyCode.S)) { campos -= _camTransform.forward * Time.deltaTime * _positionStep; }
+        //if (Input.GetKey(KeyCode.D)) { campos += _camTransform.right * Time.deltaTime * _positionStep2; }
+        //if (Input.GetKey(KeyCode.A)) { campos -= _camTransform.right * Time.deltaTime * _positionStep2; }
+        //if (Input.GetKey(KeyCode.E)) { campos += _camTransform.up * Time.deltaTime * _positionStep2; }
+        //if (Input.GetKey(KeyCode.Q)) { campos -= _camTransform.up * Time.deltaTime * _positionStep2; }
+        //if (Input.GetKey(KeyCode.W)) { campos += _camTransform.forward * Time.deltaTime * _positionStep2; }
+        //if (Input.GetKey(KeyCode.S)) { campos -= _camTransform.forward * Time.deltaTime * _positionStep2; }
 
-        if (Input.GetKey(KeyCode.RightArrow)) { campos += _camTransform.right * Time.deltaTime * _positionStep2; }
-        if (Input.GetKey(KeyCode.LeftArrow)) { campos -= _camTransform.right * Time.deltaTime * _positionStep2; }
-        if (Input.GetKey(KeyCode.UpArrow)) { campos += _camTransform.forward * Time.deltaTime * _positionStep2; }
-        if (Input.GetKey(KeyCode.DownArrow)) { campos -= _camTransform.forward * Time.deltaTime * _positionStep2; }
+        if (Input.GetKey(KeyCode.E)) { campos += _camTransform.right * Time.deltaTime * _positionStep2; }
+        if (Input.GetKey(KeyCode.Q)) { campos -= _camTransform.right * Time.deltaTime * _positionStep2; }
+        if (Input.GetKey(KeyCode.R)) { campos += _camTransform.forward * Time.deltaTime * _positionStep2; }
+        if (Input.GetKey(KeyCode.F)) { campos -= _camTransform.forward * Time.deltaTime * _positionStep2; }
 
 
         _camTransform.position = campos;
