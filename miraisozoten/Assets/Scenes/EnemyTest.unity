@@ -2791,6 +2791,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: banana_jampAttack_
       objectReference: {fileID: 0}
+    - target: {fileID: 8201484027874036440, guid: 2f6fee3903273554d94cc14f39114b21,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50d16977f8a2eef49b693a58e05fe915, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f6fee3903273554d94cc14f39114b21, type: 3}
 --- !u!1 &1053503613
@@ -3942,6 +3947,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 445457795944143796, guid: 71cb59d4e49433f4ca989f19257620a4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60a7f27e8ed558e418e878d913f2fd3d, type: 2}
     - target: {fileID: 2387746422924504964, guid: 71cb59d4e49433f4ca989f19257620a4,
         type: 3}
       propertyPath: m_Name
@@ -4012,6 +4022,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5845524407792007312, guid: 71cb59d4e49433f4ca989f19257620a4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60a7f27e8ed558e418e878d913f2fd3d, type: 2}
+    - target: {fileID: 7860174136260411255, guid: 71cb59d4e49433f4ca989f19257620a4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60a7f27e8ed558e418e878d913f2fd3d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71cb59d4e49433f4ca989f19257620a4, type: 3}
 --- !u!1 &1457422185
@@ -6440,6 +6460,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 365726767275959810, guid: 0a28b1651cce3be4a8c1311e7345d087,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2dc3e002151c5ea459fe47fd26f87359, type: 2}
+    - target: {fileID: 4185792989749413634, guid: 0a28b1651cce3be4a8c1311e7345d087,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2dc3e002151c5ea459fe47fd26f87359, type: 2}
     - target: {fileID: 6079492606345316626, guid: 0a28b1651cce3be4a8c1311e7345d087,
         type: 3}
       propertyPath: m_LocalPosition.x

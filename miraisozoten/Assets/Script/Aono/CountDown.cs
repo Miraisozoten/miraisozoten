@@ -108,14 +108,14 @@ public class CountDown : MonoBehaviour
             game.GetComponent<SceneManage>().Result1();
         }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Flag = true;
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    Flag = true;
 
-            sprite = Resources.Load<Sprite>("Transparnent");
-            image = image.GetComponent<Image>();
-            image.sprite = sprite;
-        }
+        //    sprite = Resources.Load<Sprite>("Transparnent");
+        //    image = image.GetComponent<Image>();
+        //    image.sprite = sprite;
+        //}
 
     }
 }
