@@ -18,6 +18,10 @@ public class SwordComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!P_Status.playerCom.IsAttack())
+        {
+            SwordHitList.Clear();
+        }
         //if (P_Status.GetWeaponCollider())
         //{
 
@@ -31,8 +35,18 @@ public class SwordComponent : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("SwordHit");
+        
+        for(int i = 0; i < SwordHitList.Count; i++)
+        {
+            if (SwordHitList[i].gameObject == other.gameObject)
+            {
+                return;
+            }
+        }
+
         if (LayerMask.LayerToName(other.gameObject.layer) == "Enemy")
         {
+            SwordHitList.Add(other.gameObject);
             //for(int i = 0; i < SwordHitList.Count; i++)
             //{
             //    if (SwordHitList[i] == other.gameObject)
@@ -42,7 +56,10 @@ public class SwordComponent : MonoBehaviour
             //}
             other.GetComponent<EnemyEffect>().EffectOn();
             //Destroy(other.gameObject);
-            P_Status.ExpUp();
+            if (!P_Status.playerCom.IsAttackSp()||!P_Status.playerCom.IsAttackhard())
+            {
+                P_Status.ExpUp();
+            }
             //SwordHitList.Add(other.gameObject);
         }
     }

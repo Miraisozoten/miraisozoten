@@ -40,10 +40,12 @@ public class Player : MonoBehaviour
     float TimeCount;
     [SerializeField, Header("ホイールトリガー")]
     public bool WheelTrigger;
-
+    [SerializeField, Header("無敵時間数")]
+    public float invinciblTime;
+    private float CountTime;
 
     [SerializeField, Header("以下は触らないで")]
-
+    
     // キャラクターコントローラ（カプセルコライダ）の参照
     private CapsuleCollider col;
     private Rigidbody rb;
@@ -59,13 +61,20 @@ public class Player : MonoBehaviour
     static int rollState = Animator.StringToHash("Nomal Layer.Roll");
     static int attackState = Animator.StringToHash("Attack Layer.Attack");
     static int attacksoftState = Animator.StringToHash("Attack Layer.Attack soft");
+    static int attacksoft2State = Animator.StringToHash("Attack Layer.Attack_soft2");
+    static int attacksoft3State = Animator.StringToHash("Attack Layer.Attack_soft3");
     static int attackhardState = Animator.StringToHash("Attack Layer.Attack hard");
+    static int attackhard2State = Animator.StringToHash("Attack Layer.Attack_hard2");
+    static int attackhard3State = Animator.StringToHash("Attack Layer.Attack_hard3");
     static int attackspState = Animator.StringToHash("Attack Layer.Attack SP");
     static int HitState = Animator.StringToHash("Hit Layer.Hit");
     static int Hit1State = Animator.StringToHash("Hit Layer.Hit1");
     static int Hit2State = Animator.StringToHash("Hit Layer.Hit2");
     static int Hit3State = Animator.StringToHash("Hit Layer.Hit3");
     static int StandUpState = Animator.StringToHash("Hit Layer.StandUp");
+
+    //強攻撃用ステート保存
+    public int NowState = 0;
 
     // CapsuleColliderで設定されているコライダのHeiht、Centerの初期値を収める変数
     private float orgColHight;
@@ -140,6 +149,14 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        //時間のカウント
+        CountTime += Time.deltaTime;
+        //無敵のオンオフ
+        if (CountTime > invinciblTime)
+        {
+            Hittriger = true;
+        }
+
         // WASD入力から、XZ平面(水平な地面)を移動する方向(velocity)を得ます
         velocity = Vector3.zero;
 
@@ -201,18 +218,54 @@ public class Player : MonoBehaviour
         }
         if (!anim.GetBool("Attack hard") && !anim.GetBool("Attack soft") && !anim.GetBool("Attack sp"))
         {
+            anim.SetBool("NextAttack", false);
             if (Input.GetMouseButtonDown(1) && p_Status.ExpNow() > 0)
             {
                 anim.SetBool("Attack", true);
                 anim.SetBool("Attack hard", true);
-                p_Status.ExpDown();
+                anim.SetInteger("AttackNumber", anim.GetInteger("AttackNumber") + 1);
+                if (NowState != currentBaseState.nameHash)
+                {
+                    p_Status.ExpDown();
+                    NowState = currentBaseState.nameHash;
+                }
 
             }
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
             {
                 anim.SetBool("Attack", true);
                 anim.SetBool("Attack soft", true);
+                anim.SetInteger("AttackNumber", anim.GetInteger("AttackNumber") + 1);
             }
+        }
+        else if (anim.GetBool("NextAttack")==true)
+        {
+            if (Input.GetMouseButtonDown(1) && p_Status.ExpNow() > 0)
+            {
+                anim.SetBool("Attack", true);
+                anim.SetBool("Attack hard", true);
+                anim.SetBool("Attack soft", false);
+                setAttackAction();
+                anim.SetBool("NextAttack", false);
+                if (NowState != currentBaseState.nameHash)
+                {
+                    p_Status.ExpDown();
+                    NowState = currentBaseState.nameHash;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
+            {
+                anim.SetBool("Attack", true);
+                anim.SetBool("Attack soft", true);
+                anim.SetBool("Attack hard", false);
+                anim.SetBool("NextAttack", false);
+                setAttackAction();
+            }
+
+        }
+        else if (anim.GetFloat("AttackTime")==1)
+        {
+            anim.SetBool("NextAttack", true);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -220,14 +273,28 @@ public class Player : MonoBehaviour
             //選択されているエキスアクションを実行
             SetExAction(ExAction);
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X)|| Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetBool("Roll", true);
             Roll_Q = refCamera.hRotation;
+            anim.SetInteger("AttackNumber", 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             anim.SetBool("HitChack", true);
+            anim.SetInteger("AttackNumber", 0);
+        }
+    }
+    //攻撃コンボ
+    void setAttackAction()
+    {
+        if(currentBaseState.nameHash == attacksoftState || currentBaseState.nameHash == attackhardState)
+        {
+            anim.SetInteger("AttackNumber", 2);
+        }
+        else if (currentBaseState.nameHash == attacksoft2State || currentBaseState.nameHash == attackhard2State)
+        {
+            anim.SetInteger("AttackNumber", 3);
         }
     }
     void SetAnimation(float v)
@@ -320,6 +387,8 @@ public class Player : MonoBehaviour
                 anim.SetBool("Attack soft", false);
                 anim.SetBool("Attack hard", false);
                 anim.SetBool("Attack sp", false);
+                anim.SetInteger("AttackNumber", 0);
+                NowState = 0;
             }
             //// スペースキーを入力したらRest状態になる
             //if (Input.GetButtonDown("Jump"))
@@ -333,7 +402,8 @@ public class Player : MonoBehaviour
             {
                 anim.SetBool("HitChack", false);
             }
-        } else if (currentBaseState.nameHash == attackState || currentBaseState.nameHash == attacksoftState || currentBaseState.nameHash == attackhardState || currentBaseState.nameHash == attackspState) 
+        } else if (currentBaseState.nameHash == attackState || currentBaseState.nameHash == attacksoftState || currentBaseState.nameHash == attacksoft2State || currentBaseState.nameHash == attacksoft3State ||
+                    currentBaseState.nameHash == attackhardState || currentBaseState.nameHash == attackhard2State || currentBaseState.nameHash == attackhard3State || currentBaseState.nameHash == attackspState) 
         {
             anim.SetBool("Attack", false);
         }
@@ -486,19 +556,36 @@ public class Player : MonoBehaviour
             Debug.Log("SP");
             return true;
         }
-        if (currentBaseState.nameHash == attacksoftState)
+        if (currentBaseState.nameHash == attacksoftState|| currentBaseState.nameHash == attacksoft2State|| currentBaseState.nameHash == attacksoft3State)
         {
             Debug.Log("弱攻撃");
             return true;
         }
-        if (currentBaseState.nameHash == attackhardState)
+        if (currentBaseState.nameHash == attackhardState|| currentBaseState.nameHash == attackhard2State|| currentBaseState.nameHash == attackhard3State)
         {
             Debug.Log("強攻撃");
             return true;
         }
         return false;
     }
-
+    public bool IsAttackhard()
+    {
+        if (currentBaseState.nameHash == attackhardState || currentBaseState.nameHash == attackhard2State || currentBaseState.nameHash == attackhard3State)
+        {
+            Debug.Log("強攻撃");
+            return true;
+        }
+        return false;
+    }
+    public bool IsAttackSp()
+    {
+        if (currentBaseState.nameHash == attackspState)
+        {
+            Debug.Log("SP");
+            return true;
+        }
+        return false;
+    }
     void resetCollider()
     {
         // コンポーネントのHeight、Centerの初期値を戻す
@@ -519,6 +606,8 @@ public class Player : MonoBehaviour
     {
         if (LayerMask.LayerToName(col.gameObject.layer) == EnemyLayerName&&Hittriger)
         {
+            Hittriger = false;
+            CountTime = 0;
             Debug.Log("敵と接触");
             v = 0.0f;
             HitEnemyAttack();

@@ -59,12 +59,14 @@ public class PlayerStatusComponent : StatusComponent
     [SerializeField, Header("武器")]
     public GameObject WeaponObj1;
     public GameObject WeaponObj2;
+    public GameObject WeaponObj1_2;
+    public GameObject WeaponObj2_2;
     private BoxCollider[] WeaponColider;
 
     //private Animator anim;                          // キャラにアタッチされるアニメーターへの参照
     //private AnimatorStateInfo currentBaseState;			// base layerで使われる、アニメーターの現在の状態の参照
 
-    private Player playerCom;
+    public Player playerCom;
     
     // Start is called before the first frame update
     void Start()
@@ -86,11 +88,15 @@ public class PlayerStatusComponent : StatusComponent
         }
 
         //anim = GetComponent<Animator>();
-        WeaponColider = new BoxCollider[2];
+        WeaponColider = new BoxCollider[4];
         WeaponColider[0] = WeaponObj1.GetComponent<BoxCollider>();
         WeaponColider[0].enabled = false;
         WeaponColider[1] = WeaponObj2.GetComponent<BoxCollider>();
         WeaponColider[1].enabled = false;
+        WeaponColider[2] = WeaponObj1_2.GetComponent<BoxCollider>();
+        WeaponColider[2].enabled = false;
+        WeaponColider[3] = WeaponObj2_2.GetComponent<BoxCollider>();
+        WeaponColider[3].enabled = false;
 
         playerCom = GetComponent<Player>();
     }
@@ -125,13 +131,23 @@ public class PlayerStatusComponent : StatusComponent
 
         if (playerCom.IsAttack())
         {
-            WeaponColider[0].enabled = true;
-            WeaponColider[1].enabled = true;
+            if (playerCom.IsAttackSp())
+            {
+                WeaponColider[2].enabled = true;
+                WeaponColider[3].enabled = true;
+            }
+            else
+            {
+                WeaponColider[0].enabled = true;
+                WeaponColider[1].enabled = true;
+            }
         }
         else
         {
             WeaponColider[0].enabled = false;
             WeaponColider[1].enabled = false;
+            WeaponColider[2].enabled = false;
+            WeaponColider[3].enabled = false;
         }
 
         if (HP_Max_Icon >= HP_Icon)
