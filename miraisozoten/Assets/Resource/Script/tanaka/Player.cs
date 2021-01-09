@@ -435,11 +435,11 @@ public class Player : MonoBehaviour
         {
             //回復
             case (int)ExActionName.Heal:
-                if (p_Status.ExpNow() > 0)
+                if (p_Status.ExpNow() > 0&&p_Status.HPNow()<p_Status.HP_Max_Icon)
                 {
                     Debug.Log("Heal");
                     SEManager.Instance.Play("Heal");
-                    p_Status.HPUp(1);
+                    p_Status.HPUp(1.0f);
                     p_Status.ExpDown();
                 }
                 break;
@@ -615,6 +615,7 @@ public class Player : MonoBehaviour
             Debug.Log("敵と接触");
             v = 0.0f;
             HitEnemyAttack();
+            p_Status.HPDown(1.0f);
         }
     }
 

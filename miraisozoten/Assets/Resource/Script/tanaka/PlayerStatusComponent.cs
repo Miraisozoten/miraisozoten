@@ -157,7 +157,7 @@ public class PlayerStatusComponent : StatusComponent
         {
             HP_Icon = HP_Max_Icon;
         }
-        if (Input.GetKeyDown(KeyCode.F5) || LifeList.Count != HP_Max_Icon * 2) 
+        if (Input.GetKeyDown(KeyCode.F5) || LifeList.Count != HP_Max_Icon) 
         {
             IconReset();
         }
@@ -194,7 +194,7 @@ public class PlayerStatusComponent : StatusComponent
         {
             for (int i = 0; i < LifeList.Count; i++)
             {
-                if (i < HP_Icon * 2)
+                if (i < HP_Icon )
                 {
                     if (LifeList[i].active == false)
                     {
@@ -350,6 +350,12 @@ public class PlayerStatusComponent : StatusComponent
     public bool GetWeaponCollider()
     {
         return WeaponColider[0].enabled;
+    }
+
+    public float HPNow()
+    {
+
+        return HP_Icon;
     }
 }
 
