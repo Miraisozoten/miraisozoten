@@ -435,9 +435,13 @@ public class Player : MonoBehaviour
         {
             //回復
             case (int)ExActionName.Heal:
-                Debug.Log("Heal");
-                SEManager.Instance.Play("Heal");
-                p_Status.HPUp(1);
+                if (p_Status.ExpNow() > 0)
+                {
+                    Debug.Log("Heal");
+                    SEManager.Instance.Play("Heal");
+                    p_Status.HPUp(1);
+                    p_Status.ExpDown();
+                }
                 break;
 
             //必殺技
