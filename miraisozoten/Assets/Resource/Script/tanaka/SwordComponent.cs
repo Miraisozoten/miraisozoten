@@ -35,8 +35,10 @@ public class SwordComponent : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("SwordHit");
-        
-        for(int i = 0; i < SwordHitList.Count; i++)
+
+        Move Movescript = other.GetComponent<Move>();
+
+        for (int i = 0; i < SwordHitList.Count; i++)
         {
             if (SwordHitList[i].gameObject == other.gameObject)
             {
@@ -47,20 +49,26 @@ public class SwordComponent : MonoBehaviour
         if (LayerMask.LayerToName(other.gameObject.layer) == "Enemy")
         {
             SwordHitList.Add(other.gameObject);
-            //for(int i = 0; i < SwordHitList.Count; i++)
-            //{
-            //    if (SwordHitList[i] == other.gameObject)
-            //    {
-            //        return;
-            //    }
-            //}
-            other.GetComponent<EnemyEffect>().EffectOn();
-            //Destroy(other.gameObject);
-            if (!P_Status.playerCom.IsAttackSp()||!P_Status.playerCom.IsAttackhard())
+            Movescript.HP -= (int)P_Status.AttackPower;
+
+            if (!P_Status.playerCom.IsAttackSp() || !P_Status.playerCom.IsAttackhard())
             {
                 P_Status.ExpUp();
             }
-            //SwordHitList.Add(other.gameObject);
+
+            if (Movescript.HP < 0)
+            {
+                //for(int i = 0; i < SwordHitList.Count; i++)
+                //{
+                //    if (SwordHitList[i] == other.gameObject)
+                //    {
+                //        return;
+                //    }
+                //}
+                other.GetComponent<EnemyEffect>().EffectOn();
+                //Destroy(other.gameObject);
+                //SwordHitList.Add(other.gameObject);
+            }
         }
     }
 

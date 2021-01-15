@@ -19,6 +19,8 @@ public class PlayerStatusComponent : StatusComponent
     /////////////////////////////////////////////////////////////
 
     //Icon
+    [SerializeField, Header("攻撃力")]
+    public int AttackPower;
     [SerializeField, Header("HP量")]
     public float HP_Icon;
     [SerializeField, Header("エキス量")]
@@ -133,17 +135,20 @@ public class PlayerStatusComponent : StatusComponent
         {
             if (playerCom.IsAttackSp())
             {
+                Debug.Log("oncolSP");
                 WeaponColider[2].enabled = true;
                 WeaponColider[3].enabled = true;
             }
             else
             {
+                Debug.Log("oncolnomal");
                 WeaponColider[0].enabled = true;
                 WeaponColider[1].enabled = true;
             }
         }
         else
         {
+            Debug.Log("offcol");
             WeaponColider[0].enabled = false;
             WeaponColider[1].enabled = false;
             WeaponColider[2].enabled = false;
